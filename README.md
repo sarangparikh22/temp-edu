@@ -13,7 +13,7 @@ This repo comes with everything you need to start for education platform using s
 
 2. Clone the repo.
    ```
-   https://github.com/mankenavenkatesh/EduPlatform.git
+   git clone https://github.com/mankenavenkatesh/EduPlatform.git
    ```
 
 4. Compile and migrate the smart contracts. 
