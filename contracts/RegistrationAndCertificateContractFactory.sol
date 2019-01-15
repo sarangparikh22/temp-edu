@@ -7,7 +7,7 @@ contract RegistrationAndCertificateContractFactory {
         uint phoneNumber;
         string emailId;
         address[] registrationContracts;
-        mapping(address => address[]) registrationContractsByCollege;
+        mapping(address => address) registrationContractByCollege;
     }
     
     struct College {
@@ -15,7 +15,7 @@ contract RegistrationAndCertificateContractFactory {
         string instituteCode;
         string instituteAISHECode;
         address[] registrationContracts;
-        mapping(address => address[]) registrationContractsByStudent;
+        mapping(address => address) registrationContractByStudent;
     }
     
     Student[] studentList;
@@ -59,17 +59,30 @@ contract RegistrationAndCertificateContractFactory {
         studentInfo[msg.sender].registrationContractsByCollege[collegeAddress].push(newRegistrationContract);
     }
     
-    function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (String) {
-            address registrationContractAddress = studentInfo[studentAddress].registrationContractsByCollege[collegeAddress];
-            RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
-            return registrationContract.getRegistrationStatus();
-    }
-    
-    function verifyRegistration(address studentAddress){
+    function verifyStudentProfile(address studentAddress){
         address registrationContractAddress = collegeInfo[msg.sender].registrationContractsByStudent[studentAddress];
-            RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
-            return registrationContract.verifyRegistration();
+        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        registrationContract.verifyRegistration();
     }
     
+    function approveRegistration(address studentAddress) public
+    {
+        address registrationContractAddress = collegeInfo[msg.sender].registrationContractsByStudent[studentAddress];
+        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        registrationContract.approveRegistration();
+    }
     
+    function acceptRegistration(address collegeAddress) public
+    {
+        address registrationContractAddress = studentInfo[msg.sender].registrationContractsByCollege[collegeAddress];
+        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        registrationContract.acceptRegistration();
+    }
     
+    function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (String) {
+        address registrationContractAddress = studentInfo[studentAddress].registrationContractsByCollege[collegeAddress];
+        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        return registrationContract.getRegistrationStatus();
+    }
+    
+}
