@@ -3,15 +3,17 @@ pragma solidity ^0.5.1;
 contract RegistrationAndCertificateContractFactory {
 
     struct Student {
-        string name;
-        uint age;
+        string fullName;
+        uint phoneNumber;
+        string emailId;
         address[] registrationContracts;
         mapping(address => address[]) registrationContractsByCollege;
     }
     
     struct College {
-        string name;
-        uint age;
+        string instituteName;
+        string instituteCode;
+        string instituteAISHECode;
         address[] registrationContracts;
         mapping(address => address[]) registrationContractsByStudent;
     }
@@ -23,16 +25,17 @@ contract RegistrationAndCertificateContractFactory {
     mapping(address => College) collegeInfo;
     
     
-    function createStudent(string name, uint age) public doesStudentExist(msg.sender){
-        Student newStudent = Student(name, age);
+    function createStudent(string name, uint phoneNumber, string emailId) public doesStudentExist(msg.sender){
+        Student newStudent = Student(name, phoneNumber,emailId );
         studentList.push(newStudent);
         studentInfo[msg.sender] = newStudent;
     }
     
     
-    function createCollege() {
-        College newCollege = College(name, age);
+    function createCollege(string instituteName, string instituteCode, string instituteAISHECode) {
+        College newCollege = College(instituteName, instituteCode, instituteAISHECode);
         collegeList.push(newCollege);
+        collegeInfo[msg.sender] = newCollege;
     }
     
     modifier doesStudentExist(address studentAddress) {
