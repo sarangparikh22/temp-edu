@@ -4,15 +4,21 @@ pragma solidity ^0.5.1;
         address studentAddress;
         address collegeAddress;
         
+        struct StudentInfo {
+            string collegeRegId;
+            string collegeEmailId;
+            uint dateOfJoining;
+            uint dateOfPassing;
+        }
+        
         enum Stages {
-            AcceptingRegistrationRequests,
             RequestforRegistration,
             VerifyStudentProfile,
             ApproveRegistration,
             AcceptRegistration
         }
         
-        Stages public stage = Stages.AcceptingRegistrationRequests;
+        Stages public stage = Stages.RequestforRegistration;
         uint public creationTime = now;
         
          modifier atStage(Stages _stage) {
@@ -30,13 +36,15 @@ pragma solidity ^0.5.1;
             stage = Stages(uint(stage) + 1);
         }
         
-        function getRegistrationStatus() public view returns (string) {
-            return state;
+        constructor(address _studentAddress, address _collegeAddress, string collegeRegNumber, string collegeEmailId, uint collegeDoJ, uint collegeDateOfPassing){
+            studentAddress = _studentAddress;
+            collegeAddress = _collegeAddress;
+            studentInfo = new studentInfo(collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
+            
         }
         
-        function requestForRegistration() public atStage(Stages.AcceptingRegistrationRequests) transitionNext
-        {
-            
+        function getRegistrationStatus() public view returns (string) {
+            return state;
         }
         
         function verifyStudentProfile() public atStage(Stages.RequestforRegistration) transitionNext
