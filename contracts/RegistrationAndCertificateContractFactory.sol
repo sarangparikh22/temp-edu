@@ -1,36 +1,35 @@
 pragma solidity ^0.5.1;
 
 contract RegistrationAndCertificateContractFactory {
-    
-    mapping(address => mapping(address => address)) collegeStudentRegistrationContracts;
-    mapping(address => mapping(address => address)) collegeStudentCertificateContracts;
-    
-    
+
     struct Student {
         string name;
         uint age;
         address[] registrationContracts;
-        address[] cerficateContracts;
-        
+        mapping(address => address[]) registrationContractsByCollege;
     }
     
     struct College {
         string name;
         uint age;
         address[] registrationContracts;
-        address[] cerficateContracts;
-        
+        mapping(address => address[]) registrationContractsByStudent;
     }
     
     Student[] studentList;
     mapping(address => Student) studentInfo;
-    function createStudent(string name, uint age) doesStudentExist(msg.sender){
+    
+    College[] collegeList;
+    mapping(address => College) collegeInfo;
+    
+    
+    function createStudent(string name, uint age) public doesStudentExist(msg.sender){
         Student newStudent = Student(name, age);
         studentList.push(newStudent);
         studentInfo[msg.sender] = newStudent;
     }
     
-    College[] collegeList;
+    
     function createCollege() {
         College newCollege = College(name, age);
         collegeList.push(newCollege);
@@ -52,24 +51,14 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     function startRegistration(address collegeAddress) doesStudentExist(msg.sender) doesCollegeExist(collegeAddress) notAlreadyRegistered(studentAddress, collegeAddress) public{
-        address newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, registrationInfo);
-        collegeStudentRegistrationContracts[collegeAddress][msg.sender] = newRegistrationContract;
+        address newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, collegeId, collegeJoinDate, collegeEndDate);
         studentInfo[msg.sender].registrationContracts.push(newRegistrationContract);
-        
+        studentInfo[msg.sender].registrationContractsByCollege[collegeAddress].push(newRegistrationContract);
     }
     
     function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (String) {
-            address registrationContractAddress = collegeStudentRegistrationContracts[collegeAddress][studentAddress];
+            address registrationContractAddress = studentInfo[studentAddress].registrationContractsByCollege[collegeAddress];
             RegistrationContract registrationContract= new RegistrationContract(registrationContractAddress);
             return registrationContract.getStage();
     }
     
-    function createCertificateContract() public{
-        address newCertificateContract = new CertificateContract();
-    }
-    
-    function getCertificateContract(address studentAddress, address collegeAddress) public view returns (address) {
-            collegeStudentCertificateContracts[collegeAddress][studentAddress];
-    }
-    
-}
