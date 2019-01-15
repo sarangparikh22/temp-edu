@@ -54,7 +54,7 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     function startRegistration(address collegeAddress) doesStudentExist(msg.sender) doesCollegeExist(collegeAddress) notAlreadyRegistered(studentAddress, collegeAddress) public{
-        address newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, collegeId, collegeJoinDate, collegeEndDate);
+        address newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
         studentInfo[msg.sender].registrationContracts.push(newRegistrationContract);
         studentInfo[msg.sender].registrationContractsByCollege[collegeAddress].push(newRegistrationContract);
     }
