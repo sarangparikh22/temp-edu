@@ -1,0 +1,61 @@
+.upp {
+  background-color: black;
+}
+.navbar-brand {
+  align-content: center;
+}
+
+.main-navigation__wrapper {
+  position: fixed;
+  height: 80px;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  background-color: grey;
+}
+
+.main-navigation__nav--primary {
+  float: left;
+}
+
+.main-navigation__nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.main-navigation__logo {
+  float: left;
+  padding: 18px 0;
+  display: block;
+  color: #d8d8d8;
+  transition: opacity 0.3s ease-out;
+  margin-right: 40px;
+}
+
+.branding--title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-left: 36px;
+  margin-top: 14px;
+}
+
+.branding--title__sub {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: nowrap;
+  margin-left: 36px;
+  text-transform: uppercase;
+}
+
+.img_home {
+  padding-top: 0px;
+  height: 30px;
+  width: 40px;
+}

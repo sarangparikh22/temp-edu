@@ -1,0 +1,1 @@
+import "../../conveyance.css";

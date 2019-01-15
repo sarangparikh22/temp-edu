@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 
+import { BrowserRouter, Route } from "react-router-dom";
+import logo from "./logo.svg";
+import uppernav from "../src/components/UpperNav/component";
+import student from "../src/components/Register/Student/component";
+import verifier from "../src/components/Register/Verifier/component";
+import issuer from "../src/components/Register/Issuer/component";
+import conveyance from "../src/components/Conveyance/component";
+import SLanding from "../src/components/Landing/Student/component";
 import "./App.css";
 
 class App extends Component {
@@ -20,7 +28,7 @@ class App extends Component {
       const deployedNetwork = SimpleStorageContract.networks[networkId];
       const instance = new web3.eth.Contract(
         SimpleStorageContract.abi,
-        deployedNetwork && deployedNetwork.address,
+        deployedNetwork && deployedNetwork.address
       );
 
       // Set web3, accounts, and contract to the state, and then proceed with an
@@ -29,7 +37,7 @@ class App extends Component {
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
+        `Failed to load web3, accounts, or contract. Check console for details.`
       );
       console.error(error);
     }
@@ -54,17 +62,16 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Edu Platform is installed and ready.</p>
-        <h2>Welcome to Education Platform</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+        <BrowserRouter>
+          <div>
+            <Route path="/home" component={uppernav} />
+            <Route path="/student" component={student} />
+            <Route path="/verifier" component={verifier} />
+            <Route path="/issuer" component={issuer} />
+            <Route path="/process" component={conveyance} />
+            <Route path="/side" component={SLanding} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }

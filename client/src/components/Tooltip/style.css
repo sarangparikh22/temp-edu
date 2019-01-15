@@ -1,0 +1,42 @@
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.tooltip--content {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid #8e8e8e;
+  border-radius: 4px;
+  background: #fff;
+  top: 100%;
+  opacity: 0;
+  transition: all 0.2s;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.tooltip:hover > .tooltip--content {
+  visibility: initial;
+  opacity: 1;
+}
+
+.tooltip__copied-text {
+  position: absolute;
+  background: white;
+  width: 98%;
+  text-align: left;
+  margin-top: -15px;
+  visibility: hidden;
+
+  /* &.show {
+    visibility: visible;
+  } 
+  &.hide {
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  } */
+}

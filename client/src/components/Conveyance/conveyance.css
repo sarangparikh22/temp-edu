@@ -1,0 +1,128 @@
+.in_progress {
+  color: #448aff;
+}
+
+.in_complete {
+  color: #dcdcdc;
+}
+
+.done {
+  color: #417505;
+}
+
+.fas {
+  padding-right: 3px;
+}
+
+.fa-arrow-alt-circle-right {
+  color: #417505;
+}
+
+.flow {
+  background-color: #efefef;
+  margin: 10px;
+  padding: 10px;
+  height: 50px;
+}
+
+.legend-label {
+  padding-right: 25px;
+}
+
+.conveyance-diagram {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.bucket--block:nth-child(1) {
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 32%;
+  border-right: 1px dashed #c1c1c1;
+  flex-basis: 36%;
+  align-items: center;
+}
+
+.bucket--block:nth-child(2) {
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 32%;
+  border-right: 1px dashed #c1c1c1;
+  border-left: 1px dashed #c1c1c1;
+  flex-basis: 36%;
+  align-items: center;
+}
+
+.bucket--block:nth-child(3) {
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 32%;
+  border-left: 1px dashed #c1c1c1;
+  flex-basis: 36%;
+  align-items: center;
+}
+
+.bucket--name {
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stage--block {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stage--block--icon {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.stage--block--name {
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 6px;
+}
+
+.stage--block--icon .done {
+  margin-right: 7px;
+  color: green;
+}
+
+.stage--block--icon .in_progress {
+  margin-right: 7px;
+  color: #448aff;
+}
+
+.stage--block--icon .in_complete {
+  margin-right: 7px;
+  color: #dcdcdc;
+}
+
+.process-title {
+  text-align: center;
+}
+
+.fas .notranslate .done {
+  color: green;
+}
