@@ -61,7 +61,15 @@ contract RegistrationAndCertificateContractFactory {
     
     function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (String) {
             address registrationContractAddress = studentInfo[studentAddress].registrationContractsByCollege[collegeAddress];
-            RegistrationContract registrationContract= new RegistrationContract(registrationContractAddress);
-            return registrationContract.getStage();
+            RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+            return registrationContract.getRegistrationStatus();
     }
+    
+    function verifyRegistration(address studentAddress){
+        address registrationContractAddress = collegeInfo[msg.sender].registrationContractsByStudent[studentAddress];
+            RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+            return registrationContract.verifyRegistration();
+    }
+    
+    
     
