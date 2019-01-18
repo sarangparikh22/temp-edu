@@ -13,7 +13,7 @@ import SLanding from "../src/components/Landing/Student/component";
 import "./App.css";
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  /* state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
     try {
@@ -54,12 +54,12 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ storageValue: response });
-  };
+  }; */
 
   render() {
-    if (!this.state.web3) {
+    /*  if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
-    }
+    } */
     return (
       <div className="App">
         <BrowserRouter>

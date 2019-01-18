@@ -1,7 +1,7 @@
-pragma solidity ^0.5.1;
+pragma solidity ^0.5.0;
 
 contract CertificateContract {
-struct cert {
+/*struct cert {
     uint256 certId;
     address issuerAddress;
     address recipientAddress;
@@ -27,13 +27,13 @@ mapping (address => uint256) certificatesByRecipient;
  }
  
  // can be called by student of partical college
- fuction requestCertification(address collegeAddress){
+ fuction requestCertification(address collegeAddress) public{
      
  }
 
 // can be accepted by student
 function acceptCertificate(uint256 certId) {
     
-}    
+}    */ 
 
 }

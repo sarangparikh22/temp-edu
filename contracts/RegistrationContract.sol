@@ -1,5 +1,5 @@
-pragma solidity ^0.5.1;
-    contract RegistrationContract {
+pragma solidity ^0.5.0;
+/*    contract RegistrationContract {
         
         address studentAddress;
         address collegeAddress;
@@ -62,3 +62,4 @@ pragma solidity ^0.5.1;
             
         }
     }
+ */
