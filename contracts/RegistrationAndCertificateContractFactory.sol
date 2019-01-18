@@ -20,23 +20,23 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     Student[] studentList;
-    mapping(address => Student) studentInfo;
+    mapping(address => Student) studentsInfo;
     
     College[] collegeList;
-    mapping(address => College) collegeInfo;
+    mapping(address => College) collegesInfo;
     
     
     function createStudent( string memory name, uint phoneNumber,  string memory emailId) public doesStudentExist(msg.sender){
         Student memory newStudent = Student(name, phoneNumber,emailId, new address[](0) );
         studentList.push(newStudent);
-        studentInfo[msg.sender] = newStudent;
+        studentsInfo[msg.sender] = newStudent;
     }
     
     
     function createCollege(string memory instituteName, string memory instituteCode, string memory instituteAISHECode) public {
         College memory newCollege = College(instituteName, instituteCode, instituteAISHECode, new address[](0));
         collegeList.push(newCollege);
-        collegeInfo[msg.sender] = newCollege;
+        collegesInfo[msg.sender] = newCollege;
     }
     
     modifier doesStudentExist(address studentAddress) {
@@ -55,34 +55,36 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     function startRegistration(address collegeAddress, string memory collegeRegNumber, string memory collegeEmailId, uint collegeDoJ, uint collegeDateOfPassing) doesStudentExist(msg.sender) doesCollegeExist(collegeAddress) notAlreadyRegistered(msg.sender, collegeAddress) public{
-        address newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
-        studentInfo[msg.sender].registrationContracts.push(newRegistrationContract);
-        studentInfo[msg.sender].registrationContractsByCollege[collegeAddress].push(newRegistrationContract);
+        RegistrationContract newRegistrationContract = new RegistrationContract(msg.sender, collegeAddress, collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
+        studentsInfo[msg.sender].registrationContracts.push(address(newRegistrationContract));
+        studentsInfo[msg.sender].registrationContractByCollege[collegeAddress] = address(newRegistrationContract);
+        collegesInfo[msg.sender].registrationContracts.push(address(newRegistrationContract));
+        collegesInfo[msg.sender].registrationContractByStudent[collegeAddress] = address(newRegistrationContract);
     }
     
     function verifyStudentProfile(address studentAddress) public{
-        address registrationContractAddress = collegeInfo[msg.sender].registrationContractsByStudent[studentAddress];
-        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
-        registrationContract.verifyRegistration();
+        address registrationContractAddress = collegesInfo[msg.sender].registrationContractByStudent[studentAddress];
+        RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
+        registrationContract.verifyStudentProfile();
     }
     
     function approveRegistration(address studentAddress) public
     {
-        address registrationContractAddress = collegeInfo[msg.sender].registrationContractsByStudent[studentAddress];
-        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        address registrationContractAddress = collegesInfo[msg.sender].registrationContractByStudent[studentAddress];
+        RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
         registrationContract.approveRegistration();
     }
     
     function acceptRegistration(address collegeAddress) public
     {
-        address registrationContractAddress = studentInfo[msg.sender].registrationContractsByCollege[collegeAddress];
-        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        address registrationContractAddress = studentsInfo[msg.sender].registrationContractByCollege[collegeAddress];
+        RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
         registrationContract.acceptRegistration();
     }
     
     function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (string memory) {
-        address registrationContractAddress = studentInfo[studentAddress].registrationContractsByCollege[collegeAddress];
-        RegistrationContract registrationContract = new RegistrationContract(registrationContractAddress);
+        address registrationContractAddress = studentsInfo[studentAddress].registrationContractByCollege[collegeAddress];
+        RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
         return registrationContract.getRegistrationStatus();
     }
     
