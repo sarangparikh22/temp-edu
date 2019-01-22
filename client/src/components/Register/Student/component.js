@@ -1,28 +1,29 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import SimpleStorageContract from "../../../contracts/SimpleStorage.json";
+import RegFactoryContract from "../../../contracts/RegistrationAndCertificateContractFactory.json";
 import getWeb3 from "../../../utils/getWeb3";
 
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
 import "./student.css";
 class student extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: null,
-      mother: null,
-      phone: null,
-      email: null,
-      regNo: null,
-      yearOfJoining: null,
-      yearOfPassing: null,
-      toDashboard: false
-    };
-  }
+  /* ################ Ethereum ############# */
+  state = {
+    storageValue: 0,
+    web3: null,
+    accounts: null,
+    contract: null,
+    instance: null,
+
+    name: null,
+    phone: null,
+    emailID: null
+  };
 
   componentDidMount = async () => {
     try {
+      // Get network provider and web3 instance.
       const web3 = await getWeb3();
 
       // Use web3 to get the user's accounts.
@@ -35,6 +36,7 @@ class student extends Component {
         SimpleStorageContract.abi,
         deployedNetwork && deployedNetwork.address
       );
+
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
       this.setState({ web3, accounts, contract: instance }, this.runExample);
@@ -51,42 +53,62 @@ class student extends Component {
     const { accounts, contract } = this.state;
 
     // Stores a given value, 5 by default.
-    await contract.methods.set(6).send({ from: accounts[0] });
+    await contract.methods
+      .createS("XYooptyUKZ", 5)
+      .send({ from: accounts[0], gas: 130000 });
 
     // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
+    const response = await contract.methods.getS().call();
+    console.log(response);
 
     // Update state with the result.
-    this.setState({ storageValue: response });
+    // this.setState({ storageValue: response });
   };
+  /* ############# Ethereum Ends ############# */
 
-  handleSubmit = event => {
+  /* handleSubmit = event => {
     event.preventDefault();
-    const data = this.state;
-    console.log(data);
-  };
+    const { accounts, contract } = this.state;
+    contract.methods
+      .createStudent("JSR", 98, "hyi")
+      .send({ from: accounts[0], gas: 130000 })
+      .then(function(result) {
+        console.log(result);
+        console.log(event.target[0].value);
+        /* contract.methods
+          .getS()
+          .call()
+          .then(function(result) {
+            console.log(result); */
+  /*  })
+      .catch(function(e) {
+        console.log(e);
+      });
+  };  */
 
-  handleInputChange = event => {
-    event.preventDefault();
-
-    this.setState({
-      //fullName: event.target.value
-      [event.target.name]: event.target.value,
-      toDashboard: true
-    });
-  };
+  /* constructor(props) {
+    super(props);
+    this.state = {
+      name: null,
+      mother: null,
+      phone: null,
+      email: null,
+      regNo: null,
+      yearOfJoining: null,
+      yearOfPassing: null,
+      web3: null, 
+      accounts: null, 
+      contract: null
+    };
+  } */
 
   render() {
-    if (this.state.toDashboard === true) {
-      //  <Redirect to="/process" />;
-    }
     return (
       <div>
         <Uppernav />
         <Carousel />
 
         <div className="container">
-          <div>The stored value is: {this.state.storageValue}</div>
           <div className="stud">
             <h2 className="h">Student Registration form</h2>
             <form onSubmit={this.handleSubmit}>

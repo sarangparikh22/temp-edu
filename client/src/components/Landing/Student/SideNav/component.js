@@ -48,9 +48,98 @@ class studSideNav extends Component {
               </div>
             </div>
           </div>
-          <div class="col-md-9">
-            <div class="profile-content">
-              Some user related content goes here...
+          <div className="col-md-9">
+            <div className="profile-content">
+              <h4> Certificate Request Form </h4>
+              <br />
+              <form className="form-horizontal" action="/action_page.php">
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="cname">
+                    College Name
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="cname"
+                      placeholder="Enter College Name"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="cReg">
+                    Registration Number
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="cReg"
+                      placeholder="Enter your Registration/Roll Number/Student Identification Number"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="course">
+                    Course pursued
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="course"
+                      placeholder="Enter the course pursued"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="yoj">
+                    Year of Joining
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="yoj"
+                      placeholder="Enter the year you joined the college"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="yop">
+                    Year of Passing
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="yop"
+                      placeholder="Enter your year of Passing"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" for="pwd">
+                    Password:
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="pwd"
+                      placeholder="Enter password"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <div className="col-sm-offset-2 col-sm-10">
+                    <button type="submit" className="btn btn-default">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

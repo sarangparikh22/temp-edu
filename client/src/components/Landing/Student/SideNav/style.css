@@ -7,6 +7,8 @@
 .profile-sidebar {
   padding: 20px 0 10px 0;
   background: lightblue;
+  /*height: 60px; */
+  height: 468px;
 }
 
 .profile-userpic img {
