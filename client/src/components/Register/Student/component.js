@@ -8,18 +8,22 @@ import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
 import "./student.css";
 class student extends Component {
-  /* ################ Ethereum ############# */
-  state = {
-    storageValue: 0,
-    web3: null,
-    accounts: null,
-    contract: null,
-    instance: null,
+  /* ################ Smart Contract Interaction begins ############# */
 
-    name: null,
-    phone: null,
-    emailID: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      storageValue: 0,
+      web3: null,
+      accounts: null,
+      contract: null,
+      instance: null,
+
+      sname: null,
+      phone: null,
+      emailID: null
+    };
+  }
 
   componentDidMount = async () => {
     try {
@@ -31,9 +35,9 @@ class student extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
+      const deployedNetwork = RegFactoryContract.networks[networkId];
       const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
+        RegFactoryContract.abi,
         deployedNetwork && deployedNetwork.address
       );
 
@@ -49,58 +53,38 @@ class student extends Component {
     }
   };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
-
-    // Stores a given value, 5 by default.
-    await contract.methods
-      .createS("XYooptyUKZ", 5)
-      .send({ from: accounts[0], gas: 130000 });
-
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.getS().call();
-    console.log(response);
-
-    // Update state with the result.
-    // this.setState({ storageValue: response });
-  };
-  /* ############# Ethereum Ends ############# */
-
-  /* handleSubmit = event => {
+  handleSubmit = event => {
+    var sname = this.state.sname;
+    var phone = this.state.phone;
+    var emailID = this.state.emailID;
     event.preventDefault();
     const { accounts, contract } = this.state;
     contract.methods
-      .createStudent("JSR", 98, "hyi")
-      .send({ from: accounts[0], gas: 130000 })
+      .createStudent(sname, phone, emailID)
+      .send({ from: accounts[0], gas: 330000 })
       .then(function(result) {
         console.log(result);
-        console.log(event.target[0].value);
-        /* contract.methods
-          .getS()
-          .call()
-          .then(function(result) {
-            console.log(result); */
-  /*  })
+      })
       .catch(function(e) {
         console.log(e);
       });
-  };  */
 
-  /* constructor(props) {
-    super(props);
-    this.state = {
-      name: null,
-      mother: null,
-      phone: null,
-      email: null,
-      regNo: null,
-      yearOfJoining: null,
-      yearOfPassing: null,
-      web3: null, 
-      accounts: null, 
-      contract: null
-    };
-  } */
+    var sname = this.state.sname;
+    // var sname = document.getElementById("sname").value;
+    console.log("Value of sname is ", sname);
+  };
+  /* ############# SmartContract Interaction Ends ############# */
+
+  handleInputChange = event => {
+    event.preventDefault();
+    console.log(event);
+    console.log(event.target.name);
+    console.log(event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+      //  sname: event.target.value
+    });
+  };
 
   render() {
     return (
@@ -117,10 +101,10 @@ class student extends Component {
                   <i className="glyphicon glyphicon-user" />
                 </span>
                 <input
-                  id="name"
+                  id="sname"
                   type="text"
                   className="form-control"
-                  name="name"
+                  name="sname"
                   placeholder="Full Name"
                   onChange={this.handleInputChange}
                 />
@@ -160,10 +144,10 @@ class student extends Component {
                   <i className="glyphicon glyphicon-envelope" />
                 </span>
                 <input
-                  id="email"
+                  id="emailID"
                   type="email"
                   className="form-control"
-                  name="email"
+                  name="emailID"
                   placeholder="Email ID"
                   onChange={this.handleInputChange}
                 />

@@ -1,9 +1,90 @@
 import React, { Component } from "react";
 import "./style.css";
 import profile from "./profile.png";
+import RegFactoryContract from "../../../../contracts/RegistrationAndCertificateContractFactory.json";
+import getWeb3 from "../../../../utils/getWeb3";
 
 class studSideNav extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      web3: null,
+      accounts: null,
+      contract: null,
+      instance: null,
+
+      clgAddress: null,
+      clgRegNum: null,
+      clgEmailID: null,
+      clgYOJ: null,
+      clgYOP: null
+    };
+  }
+
+  componentDidMount = async () => {
+    try {
+      // Get network provider and web3 instance.
+      const web3 = await getWeb3();
+
+      // Use web3 to get the user's accounts.
+      const accounts = await web3.eth.getAccounts();
+
+      // Get the contract instance.
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = RegFactoryContract.networks[networkId];
+      const instance = new web3.eth.Contract(
+        RegFactoryContract.abi,
+        deployedNetwork && deployedNetwork.address
+      );
+
+      // Set web3, accounts, and contract to the state, and then proceed with an
+      // example of interacting with the contract's methods.
+      this.setState({ web3, accounts, contract: instance }, this.runExample);
+    } catch (error) {
+      // Catch any errors for any of the above operations.
+      alert(
+        `Failed to load web3, accounts, or contract. Check console for details.`
+      );
+      console.error(error);
+    }
+  };
+
+  handleSubmit = event => {
+    // var clgAddress = this.state.clgAddress;
+    var clgAddress = "0x99ba8eb7acd2b9d4f65f7e36ab026cedb57fb979";
+    var clgRegNum = this.state.clgRegNum;
+    var clgEmailID = this.state.clgEmailID;
+    var clgYOJ = this.state.clgYOJ;
+    var clgYOP = this.state.clgYOP;
+
+    event.preventDefault();
+    const { accounts, contract } = this.state;
+    contract.methods
+      .startRegistration(clgAddress, clgRegNum, clgEmailID, clgYOJ, clgYOP)
+      .send({ from: accounts[0], gas: 330000 })
+      .then(function(result) {
+        console.log(result);
+      })
+      .catch(function(e) {
+        console.log(e);
+      });
+
+    var asd = this.state.clgAddress;
+    // var sname = document.getElementById("sname").value;
+    console.log("Value of sname is ", asd);
+  };
+
+  handleInputChange = event => {
+    event.preventDefault();
+    console.log(event);
+    console.log(event.target.name);
+    console.log(event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+      //  sname: event.target.value
+    });
+  };
+
   render() {
     return (
       <div>
@@ -21,7 +102,7 @@ class studSideNav extends Component {
               <div className="profile-usermenu">
                 <ul className="nav">
                   <li className="active">
-                    <a href="#">
+                    <a href="">
                       <i className="glyphicon glyphicon-home" />
                       Overview{" "}
                     </a>
@@ -52,82 +133,93 @@ class studSideNav extends Component {
             <div className="profile-content">
               <h4> Certificate Request Form </h4>
               <br />
-              <form className="form-horizontal" action="/action_page.php">
+              <form className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="cname">
+                  <label className="control-label col-sm-2" for="clgAddress">
                     College Name
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="text"
                       className="form-control"
-                      id="cname"
+                      id="clgAddress"
+                      name="clgAddress"
                       placeholder="Enter College Name"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="cReg">
+                  <label className="control-label col-sm-2" for="clgRegNum">
                     Registration Number
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="text"
                       className="form-control"
-                      id="cReg"
+                      id="clgRegNum"
+                      name="clgRegNum"
                       placeholder="Enter your Registration/Roll Number/Student Identification Number"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="course">
-                    Course pursued
+                  <label className="control-label col-sm-2" for="clgEmailID">
+                    College Email ID
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="text"
                       className="form-control"
-                      id="course"
-                      placeholder="Enter the course pursued"
+                      id="clgEmailID"
+                      name="clgEmailID"
+                      placeholder="Enter the email ID used while registering for the college"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="yoj">
+                  <label className="control-label col-sm-2" for="clgYOJ">
                     Year of Joining
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="text"
                       className="form-control"
-                      id="yoj"
+                      id="clgYOJ"
+                      name="clgYOJ"
                       placeholder="Enter the year you joined the college"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="yop">
+                  <label className="control-label col-sm-2" for="clgYOP">
                     Year of Passing
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="text"
                       className="form-control"
-                      id="yop"
+                      id="clgYOP"
+                      name="clgYOP"
                       placeholder="Enter your year of Passing"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
                   <label className="control-label col-sm-2" for="pwd">
-                    Password:
+                    Course:
                   </label>
                   <div className="col-sm-10">
                     <input
                       type="password"
                       className="form-control"
                       id="pwd"
-                      placeholder="Enter password"
+                      placeholder="Enter the course pursued"
+                      onChange={this.handleInputChange}
                     />
                   </div>
                 </div>

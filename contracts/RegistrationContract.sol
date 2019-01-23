@@ -1,4 +1,6 @@
 pragma solidity ^0.5.0;
+
+
 contract RegistrationContract {
     address studentAddress;
     address collegeAddress;
@@ -32,29 +34,33 @@ contract RegistrationContract {
     uint public creationTime = now;
         
     modifier atStage(Stages _stage) {
-        require(stage == _stage);
+        require(
+            stage == _stage,
+            "Error atStage modifier");
         _;
     }
         //  // This modifier goes to the next stage
         // // after the function is done.
-    modifier transitionNext()
-    {
+    modifier transitionNext(){
         _;
         nextStage();
     }
-        
     function nextStage() internal {
         stage = Stages(uint(stage) + 1);
     }
         
       
     modifier isStudent(address addr) {
-        require(addr == studentAddress);
+        require(
+            addr == studentAddress,
+            "Error modifier isStudent");
         _;
     }
       
     modifier isCollege(address addr) {
-        require(addr == collegeAddress);
+        require(
+            addr == collegeAddress,
+            "Error modifier isCollege");
         _;
     }
         
@@ -74,26 +80,29 @@ contract RegistrationContract {
     }
         
         
-    function verifyStudentProfile(address _collegeAddress) public atStage(Stages.RequestforRegistration) isCollege(_collegeAddress) transitionNext
+    function verifyStudentProfile() public atStage(Stages.RequestforRegistration) isCollege(tx.origin) transitionNext
     {
             
     }
         
-    function approveRegistration(address _collegeAddress) public atStage(Stages.VerifyStudentProfile) isCollege(_collegeAddress) transitionNext
+    function approveRegistration() public atStage(Stages.VerifyStudentProfile) isCollege(tx.origin) transitionNext
     {
             
     }
         
-    function acceptRegistration(address _studentAddress) public atStage(Stages.ApproveRegistration) isStudent(_studentAddress) transitionNext
+    function acceptRegistration() public atStage(Stages.ApproveRegistration) isStudent(tx.origin) transitionNext
     {
             
     }
         
-    function incVal() public{
-        a += 1;
+    function getStudentAddress() public view returns(address){
+        return studentAddress;
+    }
+    function getCollegeAddress() public view returns(address){
+        return collegeAddress;
+    }
+    function getStage() public view returns(uint){
+        return uint(stage);
     }
         
-    function getVal() public view returns(uint){
-        return a;
-    }
 }

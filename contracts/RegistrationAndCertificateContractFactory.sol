@@ -1,5 +1,7 @@
 pragma solidity ^0.5.0;
+
 import "./RegistrationContract.sol";
+import "./CertificateContract.sol";
 
 contract RegistrationAndCertificateContractFactory {
 
@@ -9,6 +11,8 @@ contract RegistrationAndCertificateContractFactory {
         string emailId;
         address[] registrationContracts;
         mapping(address => address) registrationContractByCollege;
+        address[] certificationContracts;
+        mapping(address=>address) certificateContractsByCollege;
     }
     
     struct College {
@@ -17,6 +21,8 @@ contract RegistrationAndCertificateContractFactory {
         string instituteAISHECode;
         address[] registrationContracts;
         mapping(address => address) registrationContractByStudent;
+        address[] certificationContracts;
+        mapping(address=>address) certificateContractsByStudent;
     }
     
     Student[]  studentList;
@@ -33,14 +39,14 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     function createStudent( string memory name, uint phoneNumber,  string memory emailId) public doesStudentExist(msg.sender){
-        Student memory newStudent = Student(name, phoneNumber,emailId, new address[](0) );
+        Student memory newStudent = Student(name, phoneNumber,emailId, new address[](0),  new address[](1) );
         studentList.push(newStudent);
         studentsInfo[msg.sender] = newStudent;
     }
     
     
     function createCollege(string memory instituteName, string memory instituteCode, string memory instituteAISHECode) public {
-        College memory newCollege = College(instituteName, instituteCode, instituteAISHECode, new address[](0));
+        College memory newCollege = College(instituteName, instituteCode, instituteAISHECode, new address[](0),  new address[](1));
         collegeList.push(newCollege);
         collegesInfo[msg.sender] = newCollege;
     }
@@ -61,9 +67,9 @@ contract RegistrationAndCertificateContractFactory {
     }
     
     function startRegistration(
-        address collegeAddress, string memory collegeRegNumber, string memory collegeEmailId, uint collegeDoJ, uint collegeDateOfPassing) public doesStudentExist(msg.sender) doesCollegeExist(collegeAddress) notAlreadyRegistered(msg.sender, collegeAddress) {
-        RegistrationContract newRegistrationContract = new RegistrationContract
-        (msg.sender, collegeAddress, collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
+        address collegeAddress, string memory collegeRegNumber, string memory collegeEmailId, uint collegeDoJ, uint collegeDateOfPassing) doesStudentExist(msg.sender) doesCollegeExist(collegeAddress) notAlreadyRegistered(msg.sender, collegeAddress) public{
+        RegistrationContract newRegistrationContract = new 
+        RegistrationContract(msg.sender, collegeAddress, collegeRegNumber, collegeEmailId, collegeDoJ, collegeDateOfPassing);
         studentsInfo[msg.sender].registrationContracts.push(address(newRegistrationContract));
         studentsInfo[msg.sender].registrationContractByCollege[collegeAddress] = address(newRegistrationContract);
         collegesInfo[collegeAddress].registrationContracts.push(address(newRegistrationContract));
@@ -73,7 +79,7 @@ contract RegistrationAndCertificateContractFactory {
     function verifyStudentProfile(address studentAddress) public{
         //address registrationContractAddress = collegesInfo[msg.sender].registrationContractByStudent[studentAddress];
         RegistrationContract registrationContract = RegistrationContract(collegesInfo[msg.sender].registrationContractByStudent[studentAddress]);
-        registrationContract.verifyStudentProfile(msg.sender);
+        registrationContract.verifyStudentProfile();
     }
     
     
@@ -81,20 +87,49 @@ contract RegistrationAndCertificateContractFactory {
     {
         address registrationContractAddress = collegesInfo[msg.sender].registrationContractByStudent[studentAddress];
         RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
-        registrationContract.approveRegistration(msg.sender);
+        registrationContract.approveRegistration();
     }
     
     function acceptRegistration(address collegeAddress) public
     {
         address registrationContractAddress = studentsInfo[msg.sender].registrationContractByCollege[collegeAddress];
         RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
-        registrationContract.acceptRegistration(msg.sender);
+        registrationContract.acceptRegistration();
     }
     
     function getRegistrationStatus(address studentAddress, address collegeAddress) public view returns (string memory) {
         address registrationContractAddress = studentsInfo[studentAddress].registrationContractByCollege[collegeAddress];
         RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
         return registrationContract.getRegistrationStatus();
+    }
+    
+    function startCertification(address _collegeAddress) public{
+        CertificateContract certContract = new CertificateContract(_collegeAddress);
+        studentsInfo[msg.sender].certificationContracts.push(address(certContract));
+        studentsInfo[msg.sender].certificateContractsByCollege[_collegeAddress] = address(certContract) ;
+    
+        collegesInfo[_collegeAddress].certificationContracts.push(address(certContract));
+        collegesInfo[_collegeAddress].certificateContractsByStudent[msg.sender] = address(certContract);
+    }
+    
+    function reqCertification(address _collegeAddress) public{
+        CertificateContract certContract = CertificateContract(studentsInfo[msg.sender].certificateContractsByCollege[_collegeAddress]);
+        address regContract = studentsInfo[msg.sender].registrationContractByCollege[_collegeAddress];
+        certContract.requestCertification(_collegeAddress,regContract);
+        
+    }
+    function issueCertification(address _studentAddress) public{
+        CertificateContract certContract = CertificateContract(collegesInfo[msg.sender].certificateContractsByStudent[_studentAddress]);
+        certContract.issueCertificate();
+        
+    }
+    function acceptCertification(address _collegeAddress) public{
+        CertificateContract certContract = CertificateContract(studentsInfo[msg.sender].certificateContractsByCollege[_collegeAddress]);
+        certContract.acceptCertificate();
+        
+    }
+    function getCertContractAddress(address _collegeAddress) public view returns(address){
+        return studentsInfo[msg.sender].certificateContractsByCollege[_collegeAddress];
     }
     
 }
