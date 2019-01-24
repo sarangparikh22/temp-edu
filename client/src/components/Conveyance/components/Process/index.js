@@ -7,8 +7,9 @@ import StageComponent from "../Stage";
 import SubStageComponent from "../SubStage";
 
 const ProcessComponent = props => {
+  var stage = "stage Name";
   const { process, bucketIndex } = props;
-  return <StageComponent />;
+  return <StageComponent stage={stage} />;
 };
 
 export default ProcessComponent;

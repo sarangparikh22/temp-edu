@@ -14,12 +14,12 @@ class conveyance extends Component {
     };
   }
   render() {
-    //let { taraTimeline } = this.props.viantResponse;
-    let { taraTimeline } = "Process";
-    const LOCAL_BUYER = this.props.buyerNationality === "A"; //LOCAL_USER_NATIONALITY;
-    // taraTimeline = filterLDAUForLocalBuyer(taraTimeline, LOCAL_BUYER);
-    taraTimeline = "ABC;";
-
+    var taraTimeline1 = "Registration";
+    var taraTimeline2 = "Certification";
+    var taraTimeline3 = "Acceptance";
+    var buckets = {
+      timeLine: ["Registration", "Certification", "Acceptance"]
+    };
     return (
       <div>
         <Uppernav />
@@ -52,9 +52,9 @@ class conveyance extends Component {
             <h2> Process Stages </h2>
           </div>
           <section className="conveyance-diagram">
-            <BucketComponent />
-            <BucketComponent />
-            <BucketComponent taraTimeline={taraTimeline} />
+            <BucketComponent bucketName={"Registration"} />
+            <BucketComponent bucketName={"Certification"} />
+            <BucketComponent bucketName={"Acceptance"} />
           </section>
         </div>
       </div>
