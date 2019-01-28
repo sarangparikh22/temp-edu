@@ -69,7 +69,7 @@ class student extends Component {
         console.log(e);
       });
 
-    var sname = this.state.sname;
+    //var sname = this.state.sname;
     // var sname = document.getElementById("sname").value;
     console.log("Value of sname is ", sname);
   };

@@ -10,6 +10,7 @@ import verifier from "../src/components/Register/Verifier/component";
 import issuer from "../src/components/Register/Issuer/component";
 import conveyance from "../src/components/Conveyance/component";
 import SLanding from "../src/components/Landing/Student/component";
+import pr from "../src/components/ProcessStages/component";
 import "./App.css";
 
 class App extends Component {
@@ -70,6 +71,7 @@ class App extends Component {
             <Route path="/issuer" component={issuer} />
             <Route path="/process" component={conveyance} />
             <Route path="/side" component={SLanding} />
+            <Route path="/pr" component={pr} />
           </div>
         </BrowserRouter>
       </div>

@@ -1,9 +1,86 @@
 import React, { Component } from "react";
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
+import RegFactoryContract from "../../../contracts/RegistrationAndCertificateContractFactory.json";
+import getWeb3 from "../../../utils/getWeb3";
 import "./issuer.css";
 class issuer extends Component {
-  //state = {  }
+  /* ################ Smart Contract Interaction begins ############# */
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      storageValue: 0,
+      web3: null,
+      accounts: null,
+      contract: null,
+      instance: null,
+
+      instituteName: null,
+      instituteCode: null,
+      instituteAISHECode: null
+    };
+  }
+
+  componentDidMount = async () => {
+    try {
+      // Get network provider and web3 instance.
+      const web3 = await getWeb3();
+
+      // Use web3 to get the user's accounts.
+      const accounts = await web3.eth.getAccounts();
+
+      // Get the contract instance.
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = RegFactoryContract.networks[networkId];
+      const instance = new web3.eth.Contract(
+        RegFactoryContract.abi,
+        deployedNetwork && deployedNetwork.address
+      );
+
+      // Set web3, accounts, and contract to the state, and then proceed with an
+      // example of interacting with the contract's methods.
+      this.setState({ web3, accounts, contract: instance }, this.runExample);
+    } catch (error) {
+      // Catch any errors for any of the above operations.
+      alert(
+        `Failed to load web3, accounts, or contract. Check console for details.`
+      );
+      console.error(error);
+    }
+  };
+
+  handleSubmit = event => {
+    var instituteName = this.state.instituteName;
+    var instituteCode = this.state.instituteCode;
+    var instituteAISHECode = this.state.instituteAISHECode;
+    event.preventDefault();
+    const { accounts, contract } = this.state;
+    contract.methods
+      // .createCollege(instituteName, instituteCode, instituteAISHECode)
+      .createCollege(instituteName, instituteCode, instituteAISHECode)
+      .send({ from: accounts[1], gas: 330000 })
+      .then(function(result) {
+        console.log(result);
+      })
+      .catch(function(e) {
+        console.log(e);
+      });
+
+    //console.log("Value of Institute Name is ", instituteName);
+  };
+  /* ############# SmartContract Interaction Ends ############# */
+
+  handleInputChange = event => {
+    event.preventDefault();
+    console.log(event);
+    console.log(event.target.name);
+    console.log(event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   render() {
     return (
       <div>
@@ -14,51 +91,51 @@ class issuer extends Component {
           <div className="iss">
             <h2 className="h">Academic Institutes Registration form</h2>
             <br />
-            <form className="form-horizontal" action="/action_page.php">
+            <form className="form-horizontal" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
-                  Institute Name
-                </label>
+                <label className="control-label col-sm-2">Institute Name</label>
                 <div className="col-sm-10">
                   <input
                     type="text"
                     className="form-control"
-                    id="name"
-                    placeholder="Enter Company Name"
+                    id="instituteName"
+                    name="instituteName"
+                    placeholder="Enter Institute's Name"
+                    onChange={this.handleInputChange}
                   />
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
-                  Institute Code
-                </label>
+                <label className="control-label col-sm-2">Institute Code</label>
                 <div className="col-sm-10">
                   <input
                     type="text"
                     className="form-control"
-                    id="name"
-                    placeholder="Enter Company Name"
+                    id="instituteCode"
+                    name="instituteCode"
+                    placeholder="Enter Institute Code"
+                    onChange={this.handleInputChange}
                   />
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Institute AISHE Code
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
                     className="form-control"
-                    id="name"
-                    placeholder="Enter Company Name"
+                    id="instituteAISHECode"
+                    name="instituteAISHECode"
+                    placeholder="Enter AISHE Code of the Institute"
+                    onChange={this.handleInputChange}
                   />
                 </div>
               </div>
 
               <div className="form-group">
-                <label className="control-label col-sm-2" for="ctgry">
-                  Statutory Body
-                </label>
+                <label className="control-label col-sm-2">Statutory Body</label>
                 <div className="col-sm-10">
                   <select>
                     <option value="vc1">University Grants Commission</option>
@@ -96,12 +173,10 @@ class issuer extends Component {
               <br />
 
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
-                  Institute Type
-                </label>
+                <label className="control-label col-sm-2">Institute Type</label>
                 <div className="col-sm-10">
                   <label className="radio-inline">
-                    <input type="radio" name="optradio" checked />
+                    <input type="radio" name="optradio" checked readOnly />
                     University &nbsp; &nbsp;
                   </label>
                   <label className="radio-inline">
@@ -116,7 +191,7 @@ class issuer extends Component {
               </div>
 
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Date of Establishment
                 </label>
                 <div className="col-sm-10">
@@ -130,7 +205,7 @@ class issuer extends Component {
               </div>
 
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Past Name of the Institution
                 </label>
                 <div className="col-sm-10">
@@ -144,7 +219,7 @@ class issuer extends Component {
               </div>
 
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Past Name of the Institution Valid till Date
                 </label>
                 <div className="col-sm-10">
