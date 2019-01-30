@@ -57,7 +57,6 @@ class issuer extends Component {
     event.preventDefault();
     const { accounts, contract } = this.state;
     contract.methods
-      // .createCollege(instituteName, instituteCode, instituteAISHECode)
       .createCollege(instituteName, instituteCode, instituteAISHECode)
       .send({ from: accounts[1], gas: 330000 })
       .then(function(result) {

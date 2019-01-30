@@ -61,7 +61,7 @@ class studSideNav extends Component {
     const { accounts, contract } = this.state;
     contract.methods
       .startRegistration(clgAddress, clgRegNum, clgEmailID, clgYOJ, clgYOP)
-      .send({ from: accounts[0], gas: 330000 })
+      .send({ from: accounts[0], gas: 1330000 })
       .then(function(result) {
         console.log(result);
       })
@@ -210,14 +210,12 @@ class studSideNav extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="pwd">
-                    Course:
-                  </label>
+                  <label className="control-label col-sm-2">Course:</label>
                   <div className="col-sm-10">
                     <input
-                      type="password"
+                      type="text"
                       className="form-control"
-                      id="pwd"
+                      id="course"
                       placeholder="Enter the course pursued"
                       onChange={this.handleInputChange}
                     />

@@ -154,14 +154,14 @@
     "absolutePath": "/Users/mani/Edu/gitRepo/EduPlatform/contracts/RegistrationContract.sol",
     "exportedSymbols": {
       "RegistrationContract": [
-        1065
+        1138
       ]
     },
-    "id": 1066,
+    "id": 1139,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 835,
+        "id": 908,
         "literals": [
           "solidity",
           "^",
@@ -177,19 +177,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1065,
+        "id": 1138,
         "linearizedBaseContracts": [
-          1065
+          1138
         ],
         "name": "RegistrationContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 837,
+            "id": 910,
             "name": "studentAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "62:22:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -198,7 +198,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 836,
+              "id": 909,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "62:7:3",
@@ -213,10 +213,10 @@
           },
           {
             "constant": false,
-            "id": 839,
+            "id": 912,
             "name": "collegeAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "90:22:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -225,7 +225,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 838,
+              "id": 911,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "90:7:3",
@@ -240,10 +240,10 @@
           },
           {
             "constant": false,
-            "id": 842,
+            "id": 915,
             "name": "a",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "127:10:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -252,7 +252,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 840,
+              "id": 913,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "127:4:3",
@@ -264,7 +264,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 841,
+              "id": 914,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -283,14 +283,14 @@
           },
           {
             "canonicalName": "RegistrationContract.StudentInfo",
-            "id": 851,
+            "id": 924,
             "members": [
               {
                 "constant": false,
-                "id": 844,
+                "id": 917,
                 "name": "collegeRegNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "172:23:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -299,7 +299,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 843,
+                  "id": 916,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "172:6:3",
@@ -313,10 +313,10 @@
               },
               {
                 "constant": false,
-                "id": 846,
+                "id": 919,
                 "name": "collegeEmailId",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "205:21:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -325,7 +325,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 845,
+                  "id": 918,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "205:6:3",
@@ -339,10 +339,10 @@
               },
               {
                 "constant": false,
-                "id": 848,
+                "id": 921,
                 "name": "collegeDoJ",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "236:15:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -351,7 +351,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 847,
+                  "id": 920,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "236:4:3",
@@ -365,10 +365,10 @@
               },
               {
                 "constant": false,
-                "id": 850,
+                "id": 923,
                 "name": "collegeDateOfPassing",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "261:25:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -377,7 +377,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 849,
+                  "id": 922,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "261:4:3",
@@ -392,32 +392,32 @@
             ],
             "name": "StudentInfo",
             "nodeType": "StructDefinition",
-            "scope": 1065,
+            "scope": 1138,
             "src": "143:150:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 853,
+            "id": 926,
             "name": "studentInfo",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "307:23:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+              "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
               "typeString": "struct RegistrationContract.StudentInfo"
             },
             "typeName": {
               "contractScope": null,
-              "id": 852,
+              "id": 925,
               "name": "StudentInfo",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 851,
+              "referencedDeclaration": 924,
               "src": "307:11:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_StudentInfo_$851_storage_ptr",
+                "typeIdentifier": "t_struct$_StudentInfo_$924_storage_ptr",
                 "typeString": "struct RegistrationContract.StudentInfo"
               }
             },
@@ -426,25 +426,25 @@
           },
           {
             "body": {
-              "id": 885,
+              "id": 958,
               "nodeType": "Block",
               "src": "533:194:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 870,
+                    "id": 943,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 868,
+                      "id": 941,
                       "name": "studentAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 837,
+                      "referencedDeclaration": 910,
                       "src": "543:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -455,11 +455,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 869,
+                      "id": 942,
                       "name": "_studentAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 855,
+                      "referencedDeclaration": 928,
                       "src": "560:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -472,25 +472,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 871,
+                  "id": 944,
                   "nodeType": "ExpressionStatement",
                   "src": "543:32:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 874,
+                    "id": 947,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 872,
+                      "id": 945,
                       "name": "collegeAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 839,
+                      "referencedDeclaration": 912,
                       "src": "585:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -501,11 +501,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 873,
+                      "id": 946,
                       "name": "_collegeAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 857,
+                      "referencedDeclaration": 930,
                       "src": "602:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -518,28 +518,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 875,
+                  "id": 948,
                   "nodeType": "ExpressionStatement",
                   "src": "585:32:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 883,
+                    "id": 956,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 876,
+                      "id": 949,
                       "name": "studentInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 853,
+                      "referencedDeclaration": 926,
                       "src": "627:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+                        "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
                         "typeString": "struct RegistrationContract.StudentInfo storage ref"
                       }
                     },
@@ -550,11 +550,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 878,
+                          "id": 951,
                           "name": "collegeRegNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 859,
+                          "referencedDeclaration": 932,
                           "src": "653:16:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -563,11 +563,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 879,
+                          "id": 952,
                           "name": "collegeEmailId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 861,
+                          "referencedDeclaration": 934,
                           "src": "671:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -576,11 +576,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 880,
+                          "id": 953,
                           "name": "collegeDoJ",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 863,
+                          "referencedDeclaration": 936,
                           "src": "687:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -589,11 +589,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 881,
+                          "id": 954,
                           "name": "collegeDateOfPassing",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 865,
+                          "referencedDeclaration": 938,
                           "src": "699:20:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -620,18 +620,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 877,
+                        "id": 950,
                         "name": "StudentInfo",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 851,
+                        "referencedDeclaration": 924,
                         "src": "641:11:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_StudentInfo_$851_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_StudentInfo_$924_storage_ptr_$",
                           "typeString": "type(struct RegistrationContract.StudentInfo storage pointer)"
                         }
                       },
-                      "id": 882,
+                      "id": 955,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -641,39 +641,39 @@
                       "nodeType": "FunctionCall",
                       "src": "641:79:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_StudentInfo_$851_memory",
+                        "typeIdentifier": "t_struct$_StudentInfo_$924_memory",
                         "typeString": "struct RegistrationContract.StudentInfo memory"
                       }
                     },
                     "src": "627:93:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+                      "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
                       "typeString": "struct RegistrationContract.StudentInfo storage ref"
                     }
                   },
-                  "id": 884,
+                  "id": 957,
                   "nodeType": "ExpressionStatement",
                   "src": "627:93:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 886,
+            "id": 959,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 866,
+              "id": 939,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 855,
+                  "id": 928,
                   "name": "_studentAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "371:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -682,7 +682,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 854,
+                    "id": 927,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "371:7:3",
@@ -697,10 +697,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 857,
+                  "id": 930,
                   "name": "_collegeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "396:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -709,7 +709,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 856,
+                    "id": 929,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "396:7:3",
@@ -724,10 +724,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 859,
+                  "id": 932,
                   "name": "collegeRegNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "421:30:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -736,7 +736,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 858,
+                    "id": 931,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "421:6:3",
@@ -750,10 +750,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 861,
+                  "id": 934,
                   "name": "collegeEmailId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "453:28:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -762,7 +762,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 860,
+                    "id": 933,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "453:6:3",
@@ -776,10 +776,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 863,
+                  "id": 936,
                   "name": "collegeDoJ",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "483:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -788,7 +788,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 862,
+                    "id": 935,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "483:4:3",
@@ -802,10 +802,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 865,
+                  "id": 938,
                   "name": "collegeDateOfPassing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "500:25:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -814,7 +814,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 864,
+                    "id": 937,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "500:4:3",
@@ -830,12 +830,12 @@
               "src": "357:169:3"
             },
             "returnParameters": {
-              "id": 867,
+              "id": 940,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "533:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "346:381:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -843,28 +843,28 @@
           },
           {
             "canonicalName": "RegistrationContract.Stages",
-            "id": 891,
+            "id": 964,
             "members": [
               {
-                "id": 887,
+                "id": 960,
                 "name": "RequestforRegistration",
                 "nodeType": "EnumValue",
                 "src": "772:22:3"
               },
               {
-                "id": 888,
+                "id": 961,
                 "name": "VerifyStudentProfile",
                 "nodeType": "EnumValue",
                 "src": "804:20:3"
               },
               {
-                "id": 889,
+                "id": 962,
                 "name": "ApproveRegistration",
                 "nodeType": "EnumValue",
                 "src": "834:19:3"
               },
               {
-                "id": 890,
+                "id": 963,
                 "name": "AcceptRegistration",
                 "nodeType": "EnumValue",
                 "src": "863:18:3"
@@ -876,26 +876,26 @@
           },
           {
             "constant": false,
-            "id": 895,
+            "id": 968,
             "name": "stage",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "901:51:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Stages_$891",
+              "typeIdentifier": "t_enum$_Stages_$964",
               "typeString": "enum RegistrationContract.Stages"
             },
             "typeName": {
               "contractScope": null,
-              "id": 892,
+              "id": 965,
               "name": "Stages",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 891,
+              "referencedDeclaration": 964,
               "src": "901:6:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Stages_$891",
+                "typeIdentifier": "t_enum$_Stages_$964",
                 "typeString": "enum RegistrationContract.Stages"
               }
             },
@@ -903,18 +903,18 @@
               "argumentTypes": null,
               "expression": {
                 "argumentTypes": null,
-                "id": 893,
+                "id": 966,
                 "name": "Stages",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 891,
+                "referencedDeclaration": 964,
                 "src": "923:6:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                  "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                   "typeString": "type(enum RegistrationContract.Stages)"
                 }
               },
-              "id": 894,
+              "id": 967,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -924,7 +924,7 @@
               "referencedDeclaration": null,
               "src": "923:29:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Stages_$891",
+                "typeIdentifier": "t_enum$_Stages_$964",
                 "typeString": "enum RegistrationContract.Stages"
               }
             },
@@ -932,10 +932,10 @@
           },
           {
             "constant": false,
-            "id": 898,
+            "id": 971,
             "name": "creationTime",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "958:30:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -944,7 +944,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 896,
+              "id": 969,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "958:4:3",
@@ -955,11 +955,11 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 897,
+              "id": 970,
               "name": "now",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 1177,
+              "referencedDeclaration": 1250,
               "src": "985:3:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
@@ -970,7 +970,7 @@
           },
           {
             "body": {
-              "id": 910,
+              "id": 983,
               "nodeType": "Block",
               "src": "1035:103:3",
               "statements": [
@@ -981,24 +981,24 @@
                       {
                         "argumentTypes": null,
                         "commonType": {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         },
-                        "id": 905,
+                        "id": 978,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 903,
+                          "id": 976,
                           "name": "stage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 895,
+                          "referencedDeclaration": 968,
                           "src": "1066:5:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_Stages_$891",
+                            "typeIdentifier": "t_enum$_Stages_$964",
                             "typeString": "enum RegistrationContract.Stages"
                           }
                         },
@@ -1006,14 +1006,14 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 904,
+                          "id": 977,
                           "name": "_stage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 900,
+                          "referencedDeclaration": 973,
                           "src": "1075:6:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_Stages_$891",
+                            "typeIdentifier": "t_enum$_Stages_$964",
                             "typeString": "enum RegistrationContract.Stages"
                           }
                         },
@@ -1026,7 +1026,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f722061745374616765206d6f646966696572",
-                        "id": 906,
+                        "id": 979,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1053,21 +1053,21 @@
                           "typeString": "literal_string \"Error atStage modifier\""
                         }
                       ],
-                      "id": 902,
+                      "id": 975,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1045:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 907,
+                    "id": 980,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1081,47 +1081,47 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 908,
+                  "id": 981,
                   "nodeType": "ExpressionStatement",
                   "src": "1045:75:3"
                 },
                 {
-                  "id": 909,
+                  "id": 982,
                   "nodeType": "PlaceholderStatement",
                   "src": "1130:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 911,
+            "id": 984,
             "name": "atStage",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 901,
+              "id": 974,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 900,
+                  "id": 973,
                   "name": "_stage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 911,
+                  "scope": 984,
                   "src": "1020:13:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Stages_$891",
+                    "typeIdentifier": "t_enum$_Stages_$964",
                     "typeString": "enum RegistrationContract.Stages"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 899,
+                    "id": 972,
                     "name": "Stages",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 891,
+                    "referencedDeclaration": 964,
                     "src": "1020:6:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   },
@@ -1136,12 +1136,12 @@
           },
           {
             "body": {
-              "id": 917,
+              "id": 990,
               "nodeType": "Block",
               "src": "1262:39:3",
               "statements": [
                 {
-                  "id": 913,
+                  "id": 986,
                   "nodeType": "PlaceholderStatement",
                   "src": "1272:1:3"
                 },
@@ -1151,18 +1151,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 914,
+                      "id": 987,
                       "name": "nextStage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 932,
+                      "referencedDeclaration": 1005,
                       "src": "1283:9:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 915,
+                    "id": 988,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1176,18 +1176,18 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 916,
+                  "id": 989,
                   "nodeType": "ExpressionStatement",
                   "src": "1283:11:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 918,
+            "id": 991,
             "name": "transitionNext",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 912,
+              "id": 985,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1260:2:3"
@@ -1197,28 +1197,28 @@
           },
           {
             "body": {
-              "id": 931,
+              "id": 1004,
               "nodeType": "Block",
               "src": "1336:48:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 929,
+                    "id": 1002,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 921,
+                      "id": 994,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1346:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1233,7 +1233,7 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 927,
+                          "id": 1000,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1243,14 +1243,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 924,
+                                "id": 997,
                                 "name": "stage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 895,
+                                "referencedDeclaration": 968,
                                 "src": "1366:5:3",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_enum$_Stages_$891",
+                                  "typeIdentifier": "t_enum$_Stages_$964",
                                   "typeString": "enum RegistrationContract.Stages"
                                 }
                               }
@@ -1258,11 +1258,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_enum$_Stages_$891",
+                                  "typeIdentifier": "t_enum$_Stages_$964",
                                   "typeString": "enum RegistrationContract.Stages"
                                 }
                               ],
-                              "id": 923,
+                              "id": 996,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1275,7 +1275,7 @@
                               },
                               "typeName": "uint"
                             },
-                            "id": 925,
+                            "id": 998,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1294,7 +1294,7 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 926,
+                            "id": 999,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1323,18 +1323,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 922,
+                        "id": 995,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1354:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 928,
+                      "id": 1001,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1344,42 +1344,42 @@
                       "nodeType": "FunctionCall",
                       "src": "1354:23:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
                     "src": "1346:31:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   },
-                  "id": 930,
+                  "id": 1003,
                   "nodeType": "ExpressionStatement",
                   "src": "1346:31:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 932,
+            "id": 1005,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "nextStage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 919,
+              "id": 992,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1324:2:3"
             },
             "returnParameters": {
-              "id": 920,
+              "id": 993,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1336:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "1306:78:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1387,7 +1387,7 @@
           },
           {
             "body": {
-              "id": 944,
+              "id": 1017,
               "nodeType": "Block",
               "src": "1438:112:3",
               "statements": [
@@ -1401,18 +1401,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 939,
+                        "id": 1012,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 937,
+                          "id": 1010,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 934,
+                          "referencedDeclaration": 1007,
                           "src": "1469:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1423,11 +1423,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 938,
+                          "id": 1011,
                           "name": "studentAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 837,
+                          "referencedDeclaration": 910,
                           "src": "1477:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1443,7 +1443,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f72206d6f64696669657220697353747564656e74",
-                        "id": 940,
+                        "id": 1013,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1470,21 +1470,21 @@
                           "typeString": "literal_string \"Error modifier isStudent\""
                         }
                       ],
-                      "id": 936,
+                      "id": 1009,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1448:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 941,
+                    "id": 1014,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1498,31 +1498,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 942,
+                  "id": 1015,
                   "nodeType": "ExpressionStatement",
                   "src": "1448:84:3"
                 },
                 {
-                  "id": 943,
+                  "id": 1016,
                   "nodeType": "PlaceholderStatement",
                   "src": "1542:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 945,
+            "id": 1018,
             "name": "isStudent",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 935,
+              "id": 1008,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 934,
+                  "id": 1007,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 945,
+                  "scope": 1018,
                   "src": "1424:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1531,7 +1531,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 933,
+                    "id": 1006,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1424:7:3",
@@ -1552,7 +1552,7 @@
           },
           {
             "body": {
-              "id": 957,
+              "id": 1030,
               "nodeType": "Block",
               "src": "1595:112:3",
               "statements": [
@@ -1566,18 +1566,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 952,
+                        "id": 1025,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 950,
+                          "id": 1023,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 947,
+                          "referencedDeclaration": 1020,
                           "src": "1626:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1588,11 +1588,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 951,
+                          "id": 1024,
                           "name": "collegeAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 839,
+                          "referencedDeclaration": 912,
                           "src": "1634:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1608,7 +1608,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f72206d6f646966696572206973436f6c6c656765",
-                        "id": 953,
+                        "id": 1026,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1635,21 +1635,21 @@
                           "typeString": "literal_string \"Error modifier isCollege\""
                         }
                       ],
-                      "id": 949,
+                      "id": 1022,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1605:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 954,
+                    "id": 1027,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1663,31 +1663,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 955,
+                  "id": 1028,
                   "nodeType": "ExpressionStatement",
                   "src": "1605:84:3"
                 },
                 {
-                  "id": 956,
+                  "id": 1029,
                   "nodeType": "PlaceholderStatement",
                   "src": "1699:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 958,
+            "id": 1031,
             "name": "isCollege",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 948,
+              "id": 1021,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 947,
+                  "id": 1020,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 958,
+                  "scope": 1031,
                   "src": "1581:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1696,7 +1696,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 946,
+                    "id": 1019,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1581:7:3",
@@ -1717,7 +1717,7 @@
           },
           {
             "body": {
-              "id": 995,
+              "id": 1068,
               "nodeType": "Block",
               "src": "1790:417:3",
               "statements": [
@@ -1725,10 +1725,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 966,
+                    "id": 1039,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1737,18 +1737,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 963,
+                        "id": 1036,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1803:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 964,
+                      "id": 1037,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1758,7 +1758,7 @@
                       "referencedDeclaration": null,
                       "src": "1803:29:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1766,14 +1766,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 965,
+                      "id": 1038,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1836:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1784,11 +1784,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 970,
+                  "id": 1043,
                   "nodeType": "IfStatement",
                   "src": "1800:98:3",
                   "trueBody": {
-                    "id": 969,
+                    "id": 1042,
                     "nodeType": "Block",
                     "src": "1842:56:3",
                     "statements": [
@@ -1796,7 +1796,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "52657175657374666f72526567697374726174696f6e",
-                          "id": 967,
+                          "id": 1040,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1811,8 +1811,8 @@
                           },
                           "value": "RequestforRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 968,
+                        "functionReturnParameters": 1035,
+                        "id": 1041,
                         "nodeType": "Return",
                         "src": "1856:31:3"
                       }
@@ -1823,10 +1823,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 974,
+                    "id": 1047,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1835,18 +1835,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 971,
+                        "id": 1044,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1910:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 972,
+                      "id": 1045,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1856,7 +1856,7 @@
                       "referencedDeclaration": null,
                       "src": "1910:27:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1864,14 +1864,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 973,
+                      "id": 1046,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1941:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1882,11 +1882,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 978,
+                  "id": 1051,
                   "nodeType": "IfStatement",
                   "src": "1907:94:3",
                   "trueBody": {
-                    "id": 977,
+                    "id": 1050,
                     "nodeType": "Block",
                     "src": "1947:54:3",
                     "statements": [
@@ -1894,7 +1894,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "56657269667953747564656e7450726f66696c65",
-                          "id": 975,
+                          "id": 1048,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1909,8 +1909,8 @@
                           },
                           "value": "VerifyStudentProfile"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 976,
+                        "functionReturnParameters": 1035,
+                        "id": 1049,
                         "nodeType": "Return",
                         "src": "1961:29:3"
                       }
@@ -1921,10 +1921,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 982,
+                    "id": 1055,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1933,18 +1933,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 979,
+                        "id": 1052,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "2013:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 980,
+                      "id": 1053,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1954,7 +1954,7 @@
                       "referencedDeclaration": null,
                       "src": "2013:26:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1962,14 +1962,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 981,
+                      "id": 1054,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "2043:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -1980,11 +1980,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 986,
+                  "id": 1059,
                   "nodeType": "IfStatement",
                   "src": "2010:92:3",
                   "trueBody": {
-                    "id": 985,
+                    "id": 1058,
                     "nodeType": "Block",
                     "src": "2049:53:3",
                     "statements": [
@@ -1992,7 +1992,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "417070726f7665526567697374726174696f6e",
-                          "id": 983,
+                          "id": 1056,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2007,8 +2007,8 @@
                           },
                           "value": "ApproveRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 984,
+                        "functionReturnParameters": 1035,
+                        "id": 1057,
                         "nodeType": "Return",
                         "src": "2063:28:3"
                       }
@@ -2019,10 +2019,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 990,
+                    "id": 1063,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2031,18 +2031,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 987,
+                        "id": 1060,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "2114:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 988,
+                      "id": 1061,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2052,7 +2052,7 @@
                       "referencedDeclaration": null,
                       "src": "2114:25:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -2060,14 +2060,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 989,
+                      "id": 1062,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "2143:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -2078,11 +2078,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 994,
+                  "id": 1067,
                   "nodeType": "IfStatement",
                   "src": "2111:90:3",
                   "trueBody": {
-                    "id": 993,
+                    "id": 1066,
                     "nodeType": "Block",
                     "src": "2149:52:3",
                     "statements": [
@@ -2090,7 +2090,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "416363657074526567697374726174696f6e",
-                          "id": 991,
+                          "id": 1064,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2105,8 +2105,8 @@
                           },
                           "value": "AcceptRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 992,
+                        "functionReturnParameters": 1035,
+                        "id": 1065,
                         "nodeType": "Return",
                         "src": "2163:27:3"
                       }
@@ -2116,28 +2116,28 @@
               ]
             },
             "documentation": null,
-            "id": 996,
+            "id": 1069,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getRegistrationStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 959,
+              "id": 1032,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1751:2:3"
             },
             "returnParameters": {
-              "id": 962,
+              "id": 1035,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 961,
+                  "id": 1034,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 996,
+                  "scope": 1069,
                   "src": "1775:13:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2146,7 +2146,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 960,
+                    "id": 1033,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1775:6:3",
@@ -2161,7 +2161,7 @@
               ],
               "src": "1774:15:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "1721:486:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -2169,13 +2169,13 @@
           },
           {
             "body": {
-              "id": 1009,
+              "id": 1082,
               "nodeType": "Block",
               "src": "2348:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1010,
+            "id": 1083,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2185,18 +2185,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 999,
+                      "id": 1072,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2277:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1000,
+                    "id": 1073,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2206,22 +2206,22 @@
                     "referencedDeclaration": null,
                     "src": "2277:29:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1001,
+                "id": 1074,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 998,
+                  "id": 1071,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2269:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -2234,18 +2234,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1003,
+                      "id": 1076,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2318:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1004,
+                    "id": 1077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2260,14 +2260,14 @@
                     }
                   }
                 ],
-                "id": 1005,
+                "id": 1078,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1002,
+                  "id": 1075,
                   "name": "isCollege",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 958,
+                  "referencedDeclaration": 1031,
                   "src": "2308:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -2279,14 +2279,14 @@
               },
               {
                 "arguments": null,
-                "id": 1007,
+                "id": 1080,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1006,
+                  "id": 1079,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2329:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2300,18 +2300,18 @@
             "name": "verifyStudentProfile",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 997,
+              "id": 1070,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2259:2:3"
             },
             "returnParameters": {
-              "id": 1008,
+              "id": 1081,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2348:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2230:138:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2319,13 +2319,13 @@
           },
           {
             "body": {
-              "id": 1023,
+              "id": 1096,
               "nodeType": "Block",
               "src": "2497:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1024,
+            "id": 1097,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2335,18 +2335,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1013,
+                      "id": 1086,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2428:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1014,
+                    "id": 1087,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2356,22 +2356,22 @@
                     "referencedDeclaration": null,
                     "src": "2428:27:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1015,
+                "id": 1088,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1012,
+                  "id": 1085,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2420:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -2384,18 +2384,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1017,
+                      "id": 1090,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2467:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1018,
+                    "id": 1091,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2410,14 +2410,14 @@
                     }
                   }
                 ],
-                "id": 1019,
+                "id": 1092,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1016,
+                  "id": 1089,
                   "name": "isCollege",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 958,
+                  "referencedDeclaration": 1031,
                   "src": "2457:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -2429,14 +2429,14 @@
               },
               {
                 "arguments": null,
-                "id": 1021,
+                "id": 1094,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1020,
+                  "id": 1093,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2478:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2450,18 +2450,18 @@
             "name": "approveRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1011,
+              "id": 1084,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2410:2:3"
             },
             "returnParameters": {
-              "id": 1022,
+              "id": 1095,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2497:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2382:135:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2469,13 +2469,13 @@
           },
           {
             "body": {
-              "id": 1037,
+              "id": 1110,
               "nodeType": "Block",
               "src": "2644:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1038,
+            "id": 1111,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2485,18 +2485,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1027,
+                      "id": 1100,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2576:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1028,
+                    "id": 1101,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2506,22 +2506,22 @@
                     "referencedDeclaration": null,
                     "src": "2576:26:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1029,
+                "id": 1102,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1026,
+                  "id": 1099,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2568:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -2534,18 +2534,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1031,
+                      "id": 1104,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2614:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1032,
+                    "id": 1105,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2560,14 +2560,14 @@
                     }
                   }
                 ],
-                "id": 1033,
+                "id": 1106,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1030,
+                  "id": 1103,
                   "name": "isStudent",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 945,
+                  "referencedDeclaration": 1018,
                   "src": "2604:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -2579,14 +2579,14 @@
               },
               {
                 "arguments": null,
-                "id": 1035,
+                "id": 1108,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1034,
+                  "id": 1107,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2625:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2600,18 +2600,18 @@
             "name": "acceptRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1025,
+              "id": 1098,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2558:2:3"
             },
             "returnParameters": {
-              "id": 1036,
+              "id": 1109,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2644:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2531:133:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2619,54 +2619,54 @@
           },
           {
             "body": {
-              "id": 1045,
+              "id": 1118,
               "nodeType": "Block",
               "src": "2735:38:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1043,
+                    "id": 1116,
                     "name": "studentAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 837,
+                    "referencedDeclaration": 910,
                     "src": "2752:14:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1042,
-                  "id": 1044,
+                  "functionReturnParameters": 1115,
+                  "id": 1117,
                   "nodeType": "Return",
                   "src": "2745:21:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1046,
+            "id": 1119,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStudentAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1039,
+              "id": 1112,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2704:2:3"
             },
             "returnParameters": {
-              "id": 1042,
+              "id": 1115,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1041,
+                  "id": 1114,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1046,
+                  "scope": 1119,
                   "src": "2727:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2675,7 +2675,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1040,
+                    "id": 1113,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2727:7:3",
@@ -2691,7 +2691,7 @@
               ],
               "src": "2726:9:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2678:95:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -2699,54 +2699,54 @@
           },
           {
             "body": {
-              "id": 1053,
+              "id": 1126,
               "nodeType": "Block",
               "src": "2835:38:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1051,
+                    "id": 1124,
                     "name": "collegeAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 839,
+                    "referencedDeclaration": 912,
                     "src": "2852:14:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1050,
-                  "id": 1052,
+                  "functionReturnParameters": 1123,
+                  "id": 1125,
                   "nodeType": "Return",
                   "src": "2845:21:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1054,
+            "id": 1127,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getCollegeAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1047,
+              "id": 1120,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2804:2:3"
             },
             "returnParameters": {
-              "id": 1050,
+              "id": 1123,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1049,
+                  "id": 1122,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1054,
+                  "scope": 1127,
                   "src": "2827:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2755,7 +2755,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1048,
+                    "id": 1121,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2827:7:3",
@@ -2771,7 +2771,7 @@
               ],
               "src": "2826:9:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2778:95:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -2779,7 +2779,7 @@
           },
           {
             "body": {
-              "id": 1063,
+              "id": 1136,
               "nodeType": "Block",
               "src": "2923:35:3",
               "statements": [
@@ -2789,14 +2789,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1060,
+                        "id": 1133,
                         "name": "stage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 895,
+                        "referencedDeclaration": 968,
                         "src": "2945:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         }
                       }
@@ -2804,11 +2804,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         }
                       ],
-                      "id": 1059,
+                      "id": 1132,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2821,7 +2821,7 @@
                       },
                       "typeName": "uint"
                     },
-                    "id": 1061,
+                    "id": 1134,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2835,36 +2835,36 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1058,
-                  "id": 1062,
+                  "functionReturnParameters": 1131,
+                  "id": 1135,
                   "nodeType": "Return",
                   "src": "2933:18:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1064,
+            "id": 1137,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1055,
+              "id": 1128,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2895:2:3"
             },
             "returnParameters": {
-              "id": 1058,
+              "id": 1131,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1057,
+                  "id": 1130,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1064,
+                  "scope": 1137,
                   "src": "2918:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2873,7 +2873,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1056,
+                    "id": 1129,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2918:4:3",
@@ -2888,14 +2888,14 @@
               ],
               "src": "2917:6:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2878:80:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1066,
+        "scope": 1139,
         "src": "26:2943:3"
       }
     ],
@@ -2905,14 +2905,14 @@
     "absolutePath": "/Users/mani/Edu/gitRepo/EduPlatform/contracts/RegistrationContract.sol",
     "exportedSymbols": {
       "RegistrationContract": [
-        1065
+        1138
       ]
     },
-    "id": 1066,
+    "id": 1139,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 835,
+        "id": 908,
         "literals": [
           "solidity",
           "^",
@@ -2928,19 +2928,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1065,
+        "id": 1138,
         "linearizedBaseContracts": [
-          1065
+          1138
         ],
         "name": "RegistrationContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 837,
+            "id": 910,
             "name": "studentAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "62:22:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2949,7 +2949,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 836,
+              "id": 909,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "62:7:3",
@@ -2964,10 +2964,10 @@
           },
           {
             "constant": false,
-            "id": 839,
+            "id": 912,
             "name": "collegeAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "90:22:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2976,7 +2976,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 838,
+              "id": 911,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "90:7:3",
@@ -2991,10 +2991,10 @@
           },
           {
             "constant": false,
-            "id": 842,
+            "id": 915,
             "name": "a",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "127:10:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3003,7 +3003,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 840,
+              "id": 913,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "127:4:3",
@@ -3015,7 +3015,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 841,
+              "id": 914,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3034,14 +3034,14 @@
           },
           {
             "canonicalName": "RegistrationContract.StudentInfo",
-            "id": 851,
+            "id": 924,
             "members": [
               {
                 "constant": false,
-                "id": 844,
+                "id": 917,
                 "name": "collegeRegNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "172:23:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3050,7 +3050,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 843,
+                  "id": 916,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "172:6:3",
@@ -3064,10 +3064,10 @@
               },
               {
                 "constant": false,
-                "id": 846,
+                "id": 919,
                 "name": "collegeEmailId",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "205:21:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3076,7 +3076,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 845,
+                  "id": 918,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "205:6:3",
@@ -3090,10 +3090,10 @@
               },
               {
                 "constant": false,
-                "id": 848,
+                "id": 921,
                 "name": "collegeDoJ",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "236:15:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3102,7 +3102,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 847,
+                  "id": 920,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "236:4:3",
@@ -3116,10 +3116,10 @@
               },
               {
                 "constant": false,
-                "id": 850,
+                "id": 923,
                 "name": "collegeDateOfPassing",
                 "nodeType": "VariableDeclaration",
-                "scope": 851,
+                "scope": 924,
                 "src": "261:25:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3128,7 +3128,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 849,
+                  "id": 922,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "261:4:3",
@@ -3143,32 +3143,32 @@
             ],
             "name": "StudentInfo",
             "nodeType": "StructDefinition",
-            "scope": 1065,
+            "scope": 1138,
             "src": "143:150:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 853,
+            "id": 926,
             "name": "studentInfo",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "307:23:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+              "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
               "typeString": "struct RegistrationContract.StudentInfo"
             },
             "typeName": {
               "contractScope": null,
-              "id": 852,
+              "id": 925,
               "name": "StudentInfo",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 851,
+              "referencedDeclaration": 924,
               "src": "307:11:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_StudentInfo_$851_storage_ptr",
+                "typeIdentifier": "t_struct$_StudentInfo_$924_storage_ptr",
                 "typeString": "struct RegistrationContract.StudentInfo"
               }
             },
@@ -3177,25 +3177,25 @@
           },
           {
             "body": {
-              "id": 885,
+              "id": 958,
               "nodeType": "Block",
               "src": "533:194:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 870,
+                    "id": 943,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 868,
+                      "id": 941,
                       "name": "studentAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 837,
+                      "referencedDeclaration": 910,
                       "src": "543:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3206,11 +3206,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 869,
+                      "id": 942,
                       "name": "_studentAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 855,
+                      "referencedDeclaration": 928,
                       "src": "560:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3223,25 +3223,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 871,
+                  "id": 944,
                   "nodeType": "ExpressionStatement",
                   "src": "543:32:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 874,
+                    "id": 947,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 872,
+                      "id": 945,
                       "name": "collegeAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 839,
+                      "referencedDeclaration": 912,
                       "src": "585:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3252,11 +3252,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 873,
+                      "id": 946,
                       "name": "_collegeAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 857,
+                      "referencedDeclaration": 930,
                       "src": "602:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3269,28 +3269,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 875,
+                  "id": 948,
                   "nodeType": "ExpressionStatement",
                   "src": "585:32:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 883,
+                    "id": 956,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 876,
+                      "id": 949,
                       "name": "studentInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 853,
+                      "referencedDeclaration": 926,
                       "src": "627:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+                        "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
                         "typeString": "struct RegistrationContract.StudentInfo storage ref"
                       }
                     },
@@ -3301,11 +3301,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 878,
+                          "id": 951,
                           "name": "collegeRegNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 859,
+                          "referencedDeclaration": 932,
                           "src": "653:16:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3314,11 +3314,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 879,
+                          "id": 952,
                           "name": "collegeEmailId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 861,
+                          "referencedDeclaration": 934,
                           "src": "671:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3327,11 +3327,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 880,
+                          "id": 953,
                           "name": "collegeDoJ",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 863,
+                          "referencedDeclaration": 936,
                           "src": "687:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3340,11 +3340,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 881,
+                          "id": 954,
                           "name": "collegeDateOfPassing",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 865,
+                          "referencedDeclaration": 938,
                           "src": "699:20:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3371,18 +3371,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 877,
+                        "id": 950,
                         "name": "StudentInfo",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 851,
+                        "referencedDeclaration": 924,
                         "src": "641:11:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_StudentInfo_$851_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_StudentInfo_$924_storage_ptr_$",
                           "typeString": "type(struct RegistrationContract.StudentInfo storage pointer)"
                         }
                       },
-                      "id": 882,
+                      "id": 955,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3392,39 +3392,39 @@
                       "nodeType": "FunctionCall",
                       "src": "641:79:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_StudentInfo_$851_memory",
+                        "typeIdentifier": "t_struct$_StudentInfo_$924_memory",
                         "typeString": "struct RegistrationContract.StudentInfo memory"
                       }
                     },
                     "src": "627:93:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_StudentInfo_$851_storage",
+                      "typeIdentifier": "t_struct$_StudentInfo_$924_storage",
                       "typeString": "struct RegistrationContract.StudentInfo storage ref"
                     }
                   },
-                  "id": 884,
+                  "id": 957,
                   "nodeType": "ExpressionStatement",
                   "src": "627:93:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 886,
+            "id": 959,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 866,
+              "id": 939,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 855,
+                  "id": 928,
                   "name": "_studentAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "371:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3433,7 +3433,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 854,
+                    "id": 927,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "371:7:3",
@@ -3448,10 +3448,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 857,
+                  "id": 930,
                   "name": "_collegeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "396:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3460,7 +3460,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 856,
+                    "id": 929,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "396:7:3",
@@ -3475,10 +3475,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 859,
+                  "id": 932,
                   "name": "collegeRegNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "421:30:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3487,7 +3487,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 858,
+                    "id": 931,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "421:6:3",
@@ -3501,10 +3501,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 861,
+                  "id": 934,
                   "name": "collegeEmailId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "453:28:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3513,7 +3513,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 860,
+                    "id": 933,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "453:6:3",
@@ -3527,10 +3527,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 863,
+                  "id": 936,
                   "name": "collegeDoJ",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "483:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3539,7 +3539,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 862,
+                    "id": 935,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "483:4:3",
@@ -3553,10 +3553,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 865,
+                  "id": 938,
                   "name": "collegeDateOfPassing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 886,
+                  "scope": 959,
                   "src": "500:25:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3565,7 +3565,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 864,
+                    "id": 937,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "500:4:3",
@@ -3581,12 +3581,12 @@
               "src": "357:169:3"
             },
             "returnParameters": {
-              "id": 867,
+              "id": 940,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "533:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "346:381:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3594,28 +3594,28 @@
           },
           {
             "canonicalName": "RegistrationContract.Stages",
-            "id": 891,
+            "id": 964,
             "members": [
               {
-                "id": 887,
+                "id": 960,
                 "name": "RequestforRegistration",
                 "nodeType": "EnumValue",
                 "src": "772:22:3"
               },
               {
-                "id": 888,
+                "id": 961,
                 "name": "VerifyStudentProfile",
                 "nodeType": "EnumValue",
                 "src": "804:20:3"
               },
               {
-                "id": 889,
+                "id": 962,
                 "name": "ApproveRegistration",
                 "nodeType": "EnumValue",
                 "src": "834:19:3"
               },
               {
-                "id": 890,
+                "id": 963,
                 "name": "AcceptRegistration",
                 "nodeType": "EnumValue",
                 "src": "863:18:3"
@@ -3627,26 +3627,26 @@
           },
           {
             "constant": false,
-            "id": 895,
+            "id": 968,
             "name": "stage",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "901:51:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Stages_$891",
+              "typeIdentifier": "t_enum$_Stages_$964",
               "typeString": "enum RegistrationContract.Stages"
             },
             "typeName": {
               "contractScope": null,
-              "id": 892,
+              "id": 965,
               "name": "Stages",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 891,
+              "referencedDeclaration": 964,
               "src": "901:6:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Stages_$891",
+                "typeIdentifier": "t_enum$_Stages_$964",
                 "typeString": "enum RegistrationContract.Stages"
               }
             },
@@ -3654,18 +3654,18 @@
               "argumentTypes": null,
               "expression": {
                 "argumentTypes": null,
-                "id": 893,
+                "id": 966,
                 "name": "Stages",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 891,
+                "referencedDeclaration": 964,
                 "src": "923:6:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                  "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                   "typeString": "type(enum RegistrationContract.Stages)"
                 }
               },
-              "id": 894,
+              "id": 967,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3675,7 +3675,7 @@
               "referencedDeclaration": null,
               "src": "923:29:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Stages_$891",
+                "typeIdentifier": "t_enum$_Stages_$964",
                 "typeString": "enum RegistrationContract.Stages"
               }
             },
@@ -3683,10 +3683,10 @@
           },
           {
             "constant": false,
-            "id": 898,
+            "id": 971,
             "name": "creationTime",
             "nodeType": "VariableDeclaration",
-            "scope": 1065,
+            "scope": 1138,
             "src": "958:30:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3695,7 +3695,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 896,
+              "id": 969,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "958:4:3",
@@ -3706,11 +3706,11 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 897,
+              "id": 970,
               "name": "now",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 1177,
+              "referencedDeclaration": 1250,
               "src": "985:3:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
@@ -3721,7 +3721,7 @@
           },
           {
             "body": {
-              "id": 910,
+              "id": 983,
               "nodeType": "Block",
               "src": "1035:103:3",
               "statements": [
@@ -3732,24 +3732,24 @@
                       {
                         "argumentTypes": null,
                         "commonType": {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         },
-                        "id": 905,
+                        "id": 978,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 903,
+                          "id": 976,
                           "name": "stage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 895,
+                          "referencedDeclaration": 968,
                           "src": "1066:5:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_Stages_$891",
+                            "typeIdentifier": "t_enum$_Stages_$964",
                             "typeString": "enum RegistrationContract.Stages"
                           }
                         },
@@ -3757,14 +3757,14 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 904,
+                          "id": 977,
                           "name": "_stage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 900,
+                          "referencedDeclaration": 973,
                           "src": "1075:6:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_Stages_$891",
+                            "typeIdentifier": "t_enum$_Stages_$964",
                             "typeString": "enum RegistrationContract.Stages"
                           }
                         },
@@ -3777,7 +3777,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f722061745374616765206d6f646966696572",
-                        "id": 906,
+                        "id": 979,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3804,21 +3804,21 @@
                           "typeString": "literal_string \"Error atStage modifier\""
                         }
                       ],
-                      "id": 902,
+                      "id": 975,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1045:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 907,
+                    "id": 980,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3832,47 +3832,47 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 908,
+                  "id": 981,
                   "nodeType": "ExpressionStatement",
                   "src": "1045:75:3"
                 },
                 {
-                  "id": 909,
+                  "id": 982,
                   "nodeType": "PlaceholderStatement",
                   "src": "1130:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 911,
+            "id": 984,
             "name": "atStage",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 901,
+              "id": 974,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 900,
+                  "id": 973,
                   "name": "_stage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 911,
+                  "scope": 984,
                   "src": "1020:13:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Stages_$891",
+                    "typeIdentifier": "t_enum$_Stages_$964",
                     "typeString": "enum RegistrationContract.Stages"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 899,
+                    "id": 972,
                     "name": "Stages",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 891,
+                    "referencedDeclaration": 964,
                     "src": "1020:6:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   },
@@ -3887,12 +3887,12 @@
           },
           {
             "body": {
-              "id": 917,
+              "id": 990,
               "nodeType": "Block",
               "src": "1262:39:3",
               "statements": [
                 {
-                  "id": 913,
+                  "id": 986,
                   "nodeType": "PlaceholderStatement",
                   "src": "1272:1:3"
                 },
@@ -3902,18 +3902,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 914,
+                      "id": 987,
                       "name": "nextStage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 932,
+                      "referencedDeclaration": 1005,
                       "src": "1283:9:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 915,
+                    "id": 988,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3927,18 +3927,18 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 916,
+                  "id": 989,
                   "nodeType": "ExpressionStatement",
                   "src": "1283:11:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 918,
+            "id": 991,
             "name": "transitionNext",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 912,
+              "id": 985,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1260:2:3"
@@ -3948,28 +3948,28 @@
           },
           {
             "body": {
-              "id": 931,
+              "id": 1004,
               "nodeType": "Block",
               "src": "1336:48:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 929,
+                    "id": 1002,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 921,
+                      "id": 994,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1346:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -3984,7 +3984,7 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 927,
+                          "id": 1000,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3994,14 +3994,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 924,
+                                "id": 997,
                                 "name": "stage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 895,
+                                "referencedDeclaration": 968,
                                 "src": "1366:5:3",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_enum$_Stages_$891",
+                                  "typeIdentifier": "t_enum$_Stages_$964",
                                   "typeString": "enum RegistrationContract.Stages"
                                 }
                               }
@@ -4009,11 +4009,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_enum$_Stages_$891",
+                                  "typeIdentifier": "t_enum$_Stages_$964",
                                   "typeString": "enum RegistrationContract.Stages"
                                 }
                               ],
-                              "id": 923,
+                              "id": 996,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -4026,7 +4026,7 @@
                               },
                               "typeName": "uint"
                             },
-                            "id": 925,
+                            "id": 998,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -4045,7 +4045,7 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 926,
+                            "id": 999,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -4074,18 +4074,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 922,
+                        "id": 995,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1354:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 928,
+                      "id": 1001,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4095,42 +4095,42 @@
                       "nodeType": "FunctionCall",
                       "src": "1354:23:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
                     "src": "1346:31:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   },
-                  "id": 930,
+                  "id": 1003,
                   "nodeType": "ExpressionStatement",
                   "src": "1346:31:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 932,
+            "id": 1005,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "nextStage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 919,
+              "id": 992,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1324:2:3"
             },
             "returnParameters": {
-              "id": 920,
+              "id": 993,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1336:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "1306:78:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4138,7 +4138,7 @@
           },
           {
             "body": {
-              "id": 944,
+              "id": 1017,
               "nodeType": "Block",
               "src": "1438:112:3",
               "statements": [
@@ -4152,18 +4152,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 939,
+                        "id": 1012,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 937,
+                          "id": 1010,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 934,
+                          "referencedDeclaration": 1007,
                           "src": "1469:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4174,11 +4174,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 938,
+                          "id": 1011,
                           "name": "studentAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 837,
+                          "referencedDeclaration": 910,
                           "src": "1477:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4194,7 +4194,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f72206d6f64696669657220697353747564656e74",
-                        "id": 940,
+                        "id": 1013,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4221,21 +4221,21 @@
                           "typeString": "literal_string \"Error modifier isStudent\""
                         }
                       ],
-                      "id": 936,
+                      "id": 1009,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1448:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 941,
+                    "id": 1014,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4249,31 +4249,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 942,
+                  "id": 1015,
                   "nodeType": "ExpressionStatement",
                   "src": "1448:84:3"
                 },
                 {
-                  "id": 943,
+                  "id": 1016,
                   "nodeType": "PlaceholderStatement",
                   "src": "1542:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 945,
+            "id": 1018,
             "name": "isStudent",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 935,
+              "id": 1008,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 934,
+                  "id": 1007,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 945,
+                  "scope": 1018,
                   "src": "1424:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4282,7 +4282,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 933,
+                    "id": 1006,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1424:7:3",
@@ -4303,7 +4303,7 @@
           },
           {
             "body": {
-              "id": 957,
+              "id": 1030,
               "nodeType": "Block",
               "src": "1595:112:3",
               "statements": [
@@ -4317,18 +4317,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 952,
+                        "id": 1025,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 950,
+                          "id": 1023,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 947,
+                          "referencedDeclaration": 1020,
                           "src": "1626:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4339,11 +4339,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 951,
+                          "id": 1024,
                           "name": "collegeAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 839,
+                          "referencedDeclaration": 912,
                           "src": "1634:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4359,7 +4359,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4572726f72206d6f646966696572206973436f6c6c656765",
-                        "id": 953,
+                        "id": 1026,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4386,21 +4386,21 @@
                           "typeString": "literal_string \"Error modifier isCollege\""
                         }
                       ],
-                      "id": 949,
+                      "id": 1022,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1178,
-                        1179
+                        1251,
+                        1252
                       ],
-                      "referencedDeclaration": 1179,
+                      "referencedDeclaration": 1252,
                       "src": "1605:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 954,
+                    "id": 1027,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4414,31 +4414,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 955,
+                  "id": 1028,
                   "nodeType": "ExpressionStatement",
                   "src": "1605:84:3"
                 },
                 {
-                  "id": 956,
+                  "id": 1029,
                   "nodeType": "PlaceholderStatement",
                   "src": "1699:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 958,
+            "id": 1031,
             "name": "isCollege",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 948,
+              "id": 1021,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 947,
+                  "id": 1020,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 958,
+                  "scope": 1031,
                   "src": "1581:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4447,7 +4447,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 946,
+                    "id": 1019,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1581:7:3",
@@ -4468,7 +4468,7 @@
           },
           {
             "body": {
-              "id": 995,
+              "id": 1068,
               "nodeType": "Block",
               "src": "1790:417:3",
               "statements": [
@@ -4476,10 +4476,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 966,
+                    "id": 1039,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4488,18 +4488,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 963,
+                        "id": 1036,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1803:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 964,
+                      "id": 1037,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4509,7 +4509,7 @@
                       "referencedDeclaration": null,
                       "src": "1803:29:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4517,14 +4517,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 965,
+                      "id": 1038,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1836:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4535,11 +4535,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 970,
+                  "id": 1043,
                   "nodeType": "IfStatement",
                   "src": "1800:98:3",
                   "trueBody": {
-                    "id": 969,
+                    "id": 1042,
                     "nodeType": "Block",
                     "src": "1842:56:3",
                     "statements": [
@@ -4547,7 +4547,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "52657175657374666f72526567697374726174696f6e",
-                          "id": 967,
+                          "id": 1040,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4562,8 +4562,8 @@
                           },
                           "value": "RequestforRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 968,
+                        "functionReturnParameters": 1035,
+                        "id": 1041,
                         "nodeType": "Return",
                         "src": "1856:31:3"
                       }
@@ -4574,10 +4574,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 974,
+                    "id": 1047,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4586,18 +4586,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 971,
+                        "id": 1044,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "1910:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 972,
+                      "id": 1045,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4607,7 +4607,7 @@
                       "referencedDeclaration": null,
                       "src": "1910:27:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4615,14 +4615,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 973,
+                      "id": 1046,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "1941:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4633,11 +4633,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 978,
+                  "id": 1051,
                   "nodeType": "IfStatement",
                   "src": "1907:94:3",
                   "trueBody": {
-                    "id": 977,
+                    "id": 1050,
                     "nodeType": "Block",
                     "src": "1947:54:3",
                     "statements": [
@@ -4645,7 +4645,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "56657269667953747564656e7450726f66696c65",
-                          "id": 975,
+                          "id": 1048,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4660,8 +4660,8 @@
                           },
                           "value": "VerifyStudentProfile"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 976,
+                        "functionReturnParameters": 1035,
+                        "id": 1049,
                         "nodeType": "Return",
                         "src": "1961:29:3"
                       }
@@ -4672,10 +4672,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 982,
+                    "id": 1055,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4684,18 +4684,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 979,
+                        "id": 1052,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "2013:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 980,
+                      "id": 1053,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4705,7 +4705,7 @@
                       "referencedDeclaration": null,
                       "src": "2013:26:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4713,14 +4713,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 981,
+                      "id": 1054,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "2043:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4731,11 +4731,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 986,
+                  "id": 1059,
                   "nodeType": "IfStatement",
                   "src": "2010:92:3",
                   "trueBody": {
-                    "id": 985,
+                    "id": 1058,
                     "nodeType": "Block",
                     "src": "2049:53:3",
                     "statements": [
@@ -4743,7 +4743,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "417070726f7665526567697374726174696f6e",
-                          "id": 983,
+                          "id": 1056,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4758,8 +4758,8 @@
                           },
                           "value": "ApproveRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 984,
+                        "functionReturnParameters": 1035,
+                        "id": 1057,
                         "nodeType": "Return",
                         "src": "2063:28:3"
                       }
@@ -4770,10 +4770,10 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     },
-                    "id": 990,
+                    "id": 1063,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4782,18 +4782,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 987,
+                        "id": 1060,
                         "name": "Stages",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 891,
+                        "referencedDeclaration": 964,
                         "src": "2114:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                          "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                           "typeString": "type(enum RegistrationContract.Stages)"
                         }
                       },
-                      "id": 988,
+                      "id": 1061,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4803,7 +4803,7 @@
                       "referencedDeclaration": null,
                       "src": "2114:25:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4811,14 +4811,14 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 989,
+                      "id": 1062,
                       "name": "stage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 895,
+                      "referencedDeclaration": 968,
                       "src": "2143:5:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Stages_$891",
+                        "typeIdentifier": "t_enum$_Stages_$964",
                         "typeString": "enum RegistrationContract.Stages"
                       }
                     },
@@ -4829,11 +4829,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 994,
+                  "id": 1067,
                   "nodeType": "IfStatement",
                   "src": "2111:90:3",
                   "trueBody": {
-                    "id": 993,
+                    "id": 1066,
                     "nodeType": "Block",
                     "src": "2149:52:3",
                     "statements": [
@@ -4841,7 +4841,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "416363657074526567697374726174696f6e",
-                          "id": 991,
+                          "id": 1064,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4856,8 +4856,8 @@
                           },
                           "value": "AcceptRegistration"
                         },
-                        "functionReturnParameters": 962,
-                        "id": 992,
+                        "functionReturnParameters": 1035,
+                        "id": 1065,
                         "nodeType": "Return",
                         "src": "2163:27:3"
                       }
@@ -4867,28 +4867,28 @@
               ]
             },
             "documentation": null,
-            "id": 996,
+            "id": 1069,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getRegistrationStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 959,
+              "id": 1032,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1751:2:3"
             },
             "returnParameters": {
-              "id": 962,
+              "id": 1035,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 961,
+                  "id": 1034,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 996,
+                  "scope": 1069,
                   "src": "1775:13:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4897,7 +4897,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 960,
+                    "id": 1033,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1775:6:3",
@@ -4912,7 +4912,7 @@
               ],
               "src": "1774:15:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "1721:486:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -4920,13 +4920,13 @@
           },
           {
             "body": {
-              "id": 1009,
+              "id": 1082,
               "nodeType": "Block",
               "src": "2348:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1010,
+            "id": 1083,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -4936,18 +4936,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 999,
+                      "id": 1072,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2277:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1000,
+                    "id": 1073,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4957,22 +4957,22 @@
                     "referencedDeclaration": null,
                     "src": "2277:29:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1001,
+                "id": 1074,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 998,
+                  "id": 1071,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2269:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -4985,18 +4985,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1003,
+                      "id": 1076,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2318:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1004,
+                    "id": 1077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5011,14 +5011,14 @@
                     }
                   }
                 ],
-                "id": 1005,
+                "id": 1078,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1002,
+                  "id": 1075,
                   "name": "isCollege",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 958,
+                  "referencedDeclaration": 1031,
                   "src": "2308:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -5030,14 +5030,14 @@
               },
               {
                 "arguments": null,
-                "id": 1007,
+                "id": 1080,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1006,
+                  "id": 1079,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2329:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -5051,18 +5051,18 @@
             "name": "verifyStudentProfile",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 997,
+              "id": 1070,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2259:2:3"
             },
             "returnParameters": {
-              "id": 1008,
+              "id": 1081,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2348:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2230:138:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5070,13 +5070,13 @@
           },
           {
             "body": {
-              "id": 1023,
+              "id": 1096,
               "nodeType": "Block",
               "src": "2497:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1024,
+            "id": 1097,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -5086,18 +5086,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1013,
+                      "id": 1086,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2428:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1014,
+                    "id": 1087,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -5107,22 +5107,22 @@
                     "referencedDeclaration": null,
                     "src": "2428:27:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1015,
+                "id": 1088,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1012,
+                  "id": 1085,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2420:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -5135,18 +5135,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1017,
+                      "id": 1090,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2467:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1018,
+                    "id": 1091,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5161,14 +5161,14 @@
                     }
                   }
                 ],
-                "id": 1019,
+                "id": 1092,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1016,
+                  "id": 1089,
                   "name": "isCollege",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 958,
+                  "referencedDeclaration": 1031,
                   "src": "2457:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -5180,14 +5180,14 @@
               },
               {
                 "arguments": null,
-                "id": 1021,
+                "id": 1094,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1020,
+                  "id": 1093,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2478:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -5201,18 +5201,18 @@
             "name": "approveRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1011,
+              "id": 1084,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2410:2:3"
             },
             "returnParameters": {
-              "id": 1022,
+              "id": 1095,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2497:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2382:135:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5220,13 +5220,13 @@
           },
           {
             "body": {
-              "id": 1037,
+              "id": 1110,
               "nodeType": "Block",
               "src": "2644:20:3",
               "statements": []
             },
             "documentation": null,
-            "id": 1038,
+            "id": 1111,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -5236,18 +5236,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1027,
+                      "id": 1100,
                       "name": "Stages",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 891,
+                      "referencedDeclaration": 964,
                       "src": "2576:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_Stages_$891_$",
+                        "typeIdentifier": "t_type$_t_enum$_Stages_$964_$",
                         "typeString": "type(enum RegistrationContract.Stages)"
                       }
                     },
-                    "id": 1028,
+                    "id": 1101,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -5257,22 +5257,22 @@
                     "referencedDeclaration": null,
                     "src": "2576:26:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Stages_$891",
+                      "typeIdentifier": "t_enum$_Stages_$964",
                       "typeString": "enum RegistrationContract.Stages"
                     }
                   }
                 ],
-                "id": 1029,
+                "id": 1102,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1026,
+                  "id": 1099,
                   "name": "atStage",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 984,
                   "src": "2568:7:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$891_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_Stages_$964_$",
                     "typeString": "modifier (enum RegistrationContract.Stages)"
                   }
                 },
@@ -5285,18 +5285,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1031,
+                      "id": 1104,
                       "name": "tx",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1187,
+                      "referencedDeclaration": 1260,
                       "src": "2614:2:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_transaction",
                         "typeString": "tx"
                       }
                     },
-                    "id": 1032,
+                    "id": 1105,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5311,14 +5311,14 @@
                     }
                   }
                 ],
-                "id": 1033,
+                "id": 1106,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1030,
+                  "id": 1103,
                   "name": "isStudent",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 945,
+                  "referencedDeclaration": 1018,
                   "src": "2604:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_address_$",
@@ -5330,14 +5330,14 @@
               },
               {
                 "arguments": null,
-                "id": 1035,
+                "id": 1108,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1034,
+                  "id": 1107,
                   "name": "transitionNext",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 918,
+                  "referencedDeclaration": 991,
                   "src": "2625:14:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -5351,18 +5351,18 @@
             "name": "acceptRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1025,
+              "id": 1098,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2558:2:3"
             },
             "returnParameters": {
-              "id": 1036,
+              "id": 1109,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2644:0:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2531:133:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5370,54 +5370,54 @@
           },
           {
             "body": {
-              "id": 1045,
+              "id": 1118,
               "nodeType": "Block",
               "src": "2735:38:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1043,
+                    "id": 1116,
                     "name": "studentAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 837,
+                    "referencedDeclaration": 910,
                     "src": "2752:14:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1042,
-                  "id": 1044,
+                  "functionReturnParameters": 1115,
+                  "id": 1117,
                   "nodeType": "Return",
                   "src": "2745:21:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1046,
+            "id": 1119,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStudentAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1039,
+              "id": 1112,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2704:2:3"
             },
             "returnParameters": {
-              "id": 1042,
+              "id": 1115,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1041,
+                  "id": 1114,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1046,
+                  "scope": 1119,
                   "src": "2727:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5426,7 +5426,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1040,
+                    "id": 1113,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2727:7:3",
@@ -5442,7 +5442,7 @@
               ],
               "src": "2726:9:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2678:95:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -5450,54 +5450,54 @@
           },
           {
             "body": {
-              "id": 1053,
+              "id": 1126,
               "nodeType": "Block",
               "src": "2835:38:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1051,
+                    "id": 1124,
                     "name": "collegeAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 839,
+                    "referencedDeclaration": 912,
                     "src": "2852:14:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1050,
-                  "id": 1052,
+                  "functionReturnParameters": 1123,
+                  "id": 1125,
                   "nodeType": "Return",
                   "src": "2845:21:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1054,
+            "id": 1127,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getCollegeAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1047,
+              "id": 1120,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2804:2:3"
             },
             "returnParameters": {
-              "id": 1050,
+              "id": 1123,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1049,
+                  "id": 1122,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1054,
+                  "scope": 1127,
                   "src": "2827:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5506,7 +5506,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1048,
+                    "id": 1121,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2827:7:3",
@@ -5522,7 +5522,7 @@
               ],
               "src": "2826:9:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2778:95:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -5530,7 +5530,7 @@
           },
           {
             "body": {
-              "id": 1063,
+              "id": 1136,
               "nodeType": "Block",
               "src": "2923:35:3",
               "statements": [
@@ -5540,14 +5540,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1060,
+                        "id": 1133,
                         "name": "stage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 895,
+                        "referencedDeclaration": 968,
                         "src": "2945:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         }
                       }
@@ -5555,11 +5555,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_enum$_Stages_$891",
+                          "typeIdentifier": "t_enum$_Stages_$964",
                           "typeString": "enum RegistrationContract.Stages"
                         }
                       ],
-                      "id": 1059,
+                      "id": 1132,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5572,7 +5572,7 @@
                       },
                       "typeName": "uint"
                     },
-                    "id": 1061,
+                    "id": 1134,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5586,36 +5586,36 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1058,
-                  "id": 1062,
+                  "functionReturnParameters": 1131,
+                  "id": 1135,
                   "nodeType": "Return",
                   "src": "2933:18:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1064,
+            "id": 1137,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1055,
+              "id": 1128,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2895:2:3"
             },
             "returnParameters": {
-              "id": 1058,
+              "id": 1131,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1057,
+                  "id": 1130,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1064,
+                  "scope": 1137,
                   "src": "2918:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5624,7 +5624,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1056,
+                    "id": 1129,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2918:4:3",
@@ -5639,14 +5639,14 @@
               ],
               "src": "2917:6:3"
             },
-            "scope": 1065,
+            "scope": 1138,
             "src": "2878:80:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1066,
+        "scope": 1139,
         "src": "26:2943:3"
       }
     ],
@@ -5658,7 +5658,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T05:16:30.117Z",
+  "updatedAt": "2019-01-30T05:02:22.079Z",
   "devdoc": {
     "methods": {}
   },

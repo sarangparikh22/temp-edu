@@ -4,6 +4,9 @@ import Uppernav from "../UpperNav/component";
 import Carousel from "../Carousel/component";
 import BucketComponent from "./components/Bucket";
 import Profile from "../Landing/Student/component";
+import TabBar from "../SectionBar/component";
+
+import IssuerProfile from "../ProcessStages/IssuerProfile/component";
 import "./conveyance.css";
 
 class conveyance extends Component {
@@ -56,6 +59,10 @@ class conveyance extends Component {
             <BucketComponent bucketName={"Certification"} />
             <BucketComponent bucketName={"Acceptance"} />
           </section>
+          <br />
+          <br />
+          <TabBar />
+          <IssuerProfile />
         </div>
       </div>
     );

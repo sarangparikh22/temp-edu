@@ -4,6 +4,8 @@ import SimpleStorageContract from "../../../contracts/SimpleStorage.json";
 import RegFactoryContract from "../../../contracts/RegistrationAndCertificateContractFactory.json";
 import getWeb3 from "../../../utils/getWeb3";
 
+import { Link } from "react-router-dom";
+
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
 import "./student.css";
@@ -196,7 +198,9 @@ class student extends Component {
                 />
               </div>
               <br />
-              <button className="btn btn-primary">Submit</button>
+              <Link to="/process">
+                <button className="btn btn-primary">Submit</button>
+              </Link>
             </form>
           </div>
         </div>

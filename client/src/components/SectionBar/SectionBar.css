@@ -1,0 +1,20 @@
+.tab-bar {
+  height: 50px;
+  background-color: black;
+  text-align: center;
+}
+
+.tab-bar--item {
+  display: inline-block;
+  height: 50px;
+  padding: 0 20px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.tab-bar--item-active {
+  background-color: grey;
+  border-bottom: 5px solid;
+}

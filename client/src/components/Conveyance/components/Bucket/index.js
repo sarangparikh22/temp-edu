@@ -24,7 +24,7 @@ const BucketComponent = props => {
 };
 
 BucketComponent.propTypes = {
-  bucketName: PropTypes.array.isRequired
+  bucketName: PropTypes.string.isRequired
 };
 
 export default BucketComponent;

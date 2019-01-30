@@ -4,6 +4,8 @@ import Uppernav from "../UpperNav/component";
 import Carousel from "../Carousel/component";
 import Well1 from "./Well1/component";
 import Well2 from "./Well2/component";
+import TabBar from "../SectionBar/component";
+import IssuerProfile from "./IssuerProfile/component";
 import getWeb3 from "../../utils/getWeb3";
 import SimpleStorageContract from "../../contracts/SimpleStorage.json";
 import RegistrationAndCertificateContractFactory from "../../contracts/RegistrationAndCertificateContractFactory.json";
@@ -50,15 +52,17 @@ class ProcessStages extends Component {
   };
 
   runExample = async () => {
-    const { accounts, contract } = this.state;
+    const { accounts, contract, astate } = this.state;
 
-    // Stores a given value, 5 by default.
-    // await contract.methods.set("R", 5).send({ from: accounts[0] });
-    const result = await contract.methods.getRegistrationStatus(
-      "0x9CC53532815ccdE2d97f09571Bebd4a87a100b5E",
-      "0x99bA8eB7AcD2b9D4F65F7e36AB026ceDb57FB979"
-    );
-    console.log(result);
+    const a = await contract.methods
+      .getRegistrationStatus(
+        "0x9cc53532815ccde2d97f09571bebd4a87a100b5e",
+        "0x99ba8eb7acd2b9d4f65f7e36ab026cedb57fb979"
+      )
+      .call();
+    // console.log("Value of a is : ", a);
+    this.setState({ astate: a });
+    console.log("Status is ", this.state.astate);
 
     // Update state with the result.
     // this.setState({ storageValue: response });
@@ -74,6 +78,8 @@ class ProcessStages extends Component {
     var stage7 = "Approve Certification";
     var stage8 = "Accept Certification";
 
+    var stage_color = "success";
+
     var index1 = "1";
     var index2 = "2";
     var index3 = "3";
@@ -85,7 +91,7 @@ class ProcessStages extends Component {
 
     var status1 = "done";
     var status2 = "btn-primary";
-    var status3 = "primary";
+    var status3 = "btn-default";
     var status4 = "primary";
     var status5 = "primary";
     var status6 = "primary";
@@ -98,19 +104,73 @@ class ProcessStages extends Component {
         <Carousel />
         <br />
         <br />
-        <Well1 />
         <br />
         <br />
-        <div className="stepwizard">
-          <div className="stepwizard-row">
-            <Well2 stage={stage1} index={index1} status={status1} />
-            <Well2 stage={stage2} index={index2} status={status2} />
-            <Well2 stage={stage3} index={index3} status={status3} />
-            <Well2 stage={stage4} index={index4} status={status4} />
-            <Well2 stage={stage5} index={index5} status={status5} />
-            <Well2 stage={stage6} index={index6} status={status6} />
-            <Well2 stage={stage7} index={index7} status={status7} />
-            <Well2 stage={stage8} index={index8} status={status8} />
+
+        <div className="container">
+          <div className="stepwizard">
+            <div className="stepwizard-row">
+              <Well2
+                stage={stage1}
+                index={index1}
+                status={status1}
+                stage_color={stage_color}
+              />
+              <Well2
+                stage={stage2}
+                index={index2}
+                status={status2}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage3}
+                index={index3}
+                status={status3}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage4}
+                index={index4}
+                status={status4}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage5}
+                index={index5}
+                status={status5}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage6}
+                index={index6}
+                status={status6}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage7}
+                index={index7}
+                status={status7}
+                stage_color="default"
+              />
+              <Well2
+                stage={stage8}
+                index={index8}
+                status={status8}
+                stage_color="default"
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <TabBar />
+          <br />
+          <IssuerProfile />
+          <br />
+          <br />
+
+          <br />
+          <div>
+            <h2> Status : {this.state.astate}</h2>
           </div>
         </div>
       </div>
