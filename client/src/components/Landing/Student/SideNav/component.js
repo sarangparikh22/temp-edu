@@ -135,9 +135,7 @@ class studSideNav extends Component {
               <br />
               <form className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="clgAddress">
-                    College Name
-                  </label>
+                  <label className="control-label col-sm-2">College Name</label>
                   <div className="col-sm-10">
                     <input
                       type="text"
@@ -150,7 +148,7 @@ class studSideNav extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="clgRegNum">
+                  <label className="control-label col-sm-2">
                     Registration Number
                   </label>
                   <div className="col-sm-10">
@@ -165,7 +163,7 @@ class studSideNav extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="clgEmailID">
+                  <label className="control-label col-sm-2">
                     College Email ID
                   </label>
                   <div className="col-sm-10">
@@ -180,7 +178,7 @@ class studSideNav extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="clgYOJ">
+                  <label className="control-label col-sm-2">
                     Year of Joining
                   </label>
                   <div className="col-sm-10">
@@ -195,7 +193,7 @@ class studSideNav extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="control-label col-sm-2" for="clgYOP">
+                  <label className="control-label col-sm-2">
                     Year of Passing
                   </label>
                   <div className="col-sm-10">

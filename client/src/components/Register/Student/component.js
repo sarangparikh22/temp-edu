@@ -198,9 +198,14 @@ class student extends Component {
                 />
               </div>
               <br />
-              <Link to="/process">
-                <button className="btn btn-primary">Submit</button>
-              </Link>
+
+              <button
+                className="btn btn-primary"
+                type="submit"
+                onClick={this.handleSubmit}
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

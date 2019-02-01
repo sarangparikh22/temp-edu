@@ -52,7 +52,19 @@ class ProcessStages extends Component {
   };
 
   runExample = async () => {
-    const { accounts, contract, astate } = this.state;
+    const {
+      accounts,
+      contract,
+      astate,
+      index11,
+      index21,
+      index31,
+      index41,
+      index51,
+      index61,
+      index71,
+      index81
+    } = this.state;
 
     const a = await contract.methods
       .getRegistrationStatus(
@@ -63,6 +75,42 @@ class ProcessStages extends Component {
     // console.log("Value of a is : ", a);
     this.setState({ astate: a });
     console.log("Status is ", this.state.astate);
+
+    if (a == "AcceptRegistration") {
+      this.setState({
+        index11: "btn-success",
+        index21: "btn-success",
+        index31: "btn-success",
+        index41: "btn-success"
+      });
+    } else {
+      if (a == "ApproveRegistration") {
+        this.setState({
+          index11: "btn-success",
+          index21: "btn-success",
+          index31: "btn-success",
+          index41: "btn-primary"
+        });
+      } else {
+        if (a == "VerifyStudentProfile") {
+          this.setState({
+            index11: "btn-success",
+            index21: "btn-success",
+            index31: "btn-primary",
+            index41: "btn-default"
+          });
+        } else {
+          if (a == "RequestRegistration") {
+            this.setState({
+              index11: "btn-success",
+              index21: "btn-primary",
+              index31: "btn-default",
+              index41: "btn-default"
+            });
+          }
+        }
+      }
+    }
 
     // Update state with the result.
     // this.setState({ storageValue: response });
@@ -113,25 +161,25 @@ class ProcessStages extends Component {
               <Well2
                 stage={stage1}
                 index={index1}
-                status={status1}
+                status={this.state.index11}
                 stage_color={stage_color}
               />
               <Well2
                 stage={stage2}
                 index={index2}
-                status={status2}
+                status={this.state.index21}
                 stage_color="default"
               />
               <Well2
                 stage={stage3}
                 index={index3}
-                status={status3}
+                status={this.state.index31}
                 stage_color="default"
               />
               <Well2
                 stage={stage4}
                 index={index4}
-                status={status4}
+                status={this.state.index41}
                 stage_color="default"
               />
               <Well2
