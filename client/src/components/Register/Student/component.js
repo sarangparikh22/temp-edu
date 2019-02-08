@@ -46,6 +46,7 @@ class student extends Component {
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
       this.setState({ web3, accounts, contract: instance }, this.runExample);
+
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -53,6 +54,7 @@ class student extends Component {
       );
       console.error(error);
     }
+
   };
 
   handleSubmit = event => {
@@ -64,10 +66,11 @@ class student extends Component {
     contract.methods
       .createStudent(sname, phone, emailID)
       .send({ from: accounts[0], gas: 330000 })
-      .then(function(result) {
+      .then(function (result) {
         console.log(result);
+
       })
-      .catch(function(e) {
+      .catch(function (e) {
         console.log(e);
       });
 
@@ -194,6 +197,34 @@ class student extends Component {
                   className="form-control"
                   name="yearOfPassing"
                   placeholder="Year of Passing"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <br></br>
+              <div className="input-group">
+                <span className="input-group-addon">
+                  <i className="glyphicon glyphicon-education" />
+                </span>
+                <input
+                  id="username"
+                  type="text"
+                  className="form-control"
+                  name="username"
+                  placeholder="Please enter a user name"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <br />
+              <div className="input-group">
+                <span className="input-group-addon">
+                  <i className="glyphicon glyphicon-education" />
+                </span>
+                <input
+                  id="pwd"
+                  type="password"
+                  className="form-control"
+                  name="pwd"
+                  placeholder="Please enter a password"
                   onChange={this.handleInputChange}
                 />
               </div>

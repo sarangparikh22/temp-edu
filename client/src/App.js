@@ -11,6 +11,7 @@ import issuer from "../src/components/Register/Issuer/component";
 import conveyance from "../src/components/Conveyance/component";
 import SLanding from "../src/components/Landing/Student/component";
 import pr from "../src/components/ProcessStages/component";
+import iTest from "../src/components/Certificate/UploadC/component";
 import "./App.css";
 
 class App extends Component {
@@ -72,6 +73,7 @@ class App extends Component {
             <Route path="/process" component={conveyance} />
             <Route path="/side" component={SLanding} />
             <Route path="/pr" component={pr} />
+            <Route path="/ipfsTest" component={iTest} />
           </div>
         </BrowserRouter>
       </div>

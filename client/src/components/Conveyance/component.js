@@ -4,6 +4,7 @@ import Uppernav from "../UpperNav/component";
 import Carousel from "../Carousel/component";
 import BucketComponent from "./components/Bucket";
 import Profile from "../Landing/Student/component";
+import StartCert from "../Landing/Student/StartCert/component";
 import TabBar from "../SectionBar/component";
 
 import IssuerProfile from "../ProcessStages/IssuerProfile/component";
@@ -31,6 +32,7 @@ class conveyance extends Component {
         <br />
         <div className="container">
           <Profile />
+          <StartCert />
           <div className="flow">
             <span className="legend-label">
               <i className="fas in_complete fa-circle notranslate" />

@@ -6,6 +6,7 @@ import Well1 from "./Well1/component";
 import Well2 from "./Well2/component";
 import TabBar from "../SectionBar/component";
 import IssuerProfile from "./IssuerProfile/component";
+import UploadCertificate from "./Upload/component";
 import getWeb3 from "../../utils/getWeb3";
 import SimpleStorageContract from "../../contracts/SimpleStorage.json";
 import RegistrationAndCertificateContractFactory from "../../contracts/RegistrationAndCertificateContractFactory.json";
@@ -56,6 +57,7 @@ class ProcessStages extends Component {
       accounts,
       contract,
       astate,
+      bstate,
       index11,
       index21,
       index31,
@@ -76,41 +78,134 @@ class ProcessStages extends Component {
     this.setState({ astate: a });
     console.log("Status is ", this.state.astate);
 
-    if (a == "AcceptRegistration") {
-      this.setState({
-        index11: "btn-success",
-        index21: "btn-success",
-        index31: "btn-success",
-        index41: "btn-success"
-      });
-    } else {
-      if (a == "ApproveRegistration") {
+    /* const b = await contract.methods
+       .getCertificationStatus()
+       .call();
+     // console.log("Value of a is : ", a);
+     this.setState({ bstate: b });
+     console.log("Status is ", this.state.bstate); */
+
+    switch (a) {
+
+      case "RequestRegistration":
+        this.setState({
+          index11: "btn-success",
+          index21: "btn-primary",
+          index31: "btn-default",
+          index41: "btn-default"
+        });
+        break;
+
+      case "VerifyStudentProfile":
+        this.setState({
+          index11: "btn-success",
+          index21: "btn-success",
+          index31: "btn-primary",
+          index41: "btn-default"
+        });
+        break;
+
+      case "ApproveRegistration":
         this.setState({
           index11: "btn-success",
           index21: "btn-success",
           index31: "btn-success",
           index41: "btn-primary"
         });
-      } else {
-        if (a == "VerifyStudentProfile") {
-          this.setState({
-            index11: "btn-success",
-            index21: "btn-success",
-            index31: "btn-primary",
-            index41: "btn-default"
-          });
-        } else {
-          if (a == "RequestRegistration") {
-            this.setState({
-              index11: "btn-success",
-              index21: "btn-primary",
-              index31: "btn-default",
-              index41: "btn-default"
-            });
-          }
-        }
-      }
+        break;
+
+      case "AcceptRegistration":
+        this.setState({
+          index11: "btn-success",
+          index21: "btn-success",
+          index31: "btn-success",
+          index41: "btn-success"
+        });
+        break;
+
+      case "AcceptingCertificateRequest":
+        this.setState({
+          index51: "btn-success",
+          index61: "btn-primary",
+          index71: "btn-default",
+          index81: "btn-default"
+        })
     }
+
+    /* switch (b) {
+ 
+       case "RequestRegistration":
+         this.setState({
+           index51: "btn-success",
+           index61: "btn-primary",
+           index71: "btn-default",
+           index81: "btn-default"
+         });
+         break;
+ 
+       case "VerifyStudentProfile":
+         this.setState({
+           index51: "btn-success",
+           index61: "btn-success",
+           index71: "btn-primary",
+           index81: "btn-default"
+         });
+         break;
+ 
+       case "ApproveRegistration":
+         this.setState({
+           index51: "btn-success",
+           index61: "btn-success",
+           index71: "btn-success",
+           index81: "btn-primary"
+         });
+         break;
+ 
+       case "AcceptRegistration":
+         this.setState({
+           index51: "btn-success",
+           index61: "btn-success",
+           index71: "btn-success",
+           index81: "btn-success"
+         });
+         break;
+     } */
+
+    /* if (a == "AcceptRegistration") {
+       this.setState({
+         index11: "btn-success",
+         index21: "btn-success",
+         index31: "btn-success",
+         index41: "btn-success"
+       });
+     } else {
+       if (a == "ApproveRegistration") {
+         this.setState({
+           index11: "btn-success",
+           index21: "btn-success",
+           index31: "btn-success",
+           index41: "btn-primary"
+         });
+       } else {
+         if (a == "VerifyStudentProfile") {
+           this.setState({
+             index11: "btn-success",
+             index21: "btn-success",
+             index31: "btn-primary",
+             index41: "btn-default"
+           });
+         } else {
+           if (a == "RequestRegistration") {
+             this.setState({
+               index11: "btn-success",
+               index21: "btn-primary",
+               index31: "btn-default",
+               index41: "btn-default"
+             });
+           }
+         }
+       }
+     } */
 
     // Update state with the result.
     // this.setState({ storageValue: response });
@@ -215,7 +310,8 @@ class ProcessStages extends Component {
           <IssuerProfile />
           <br />
           <br />
-
+          <UploadCertificate />
+          <br />
           <br />
           <div>
             <h2> Status : {this.state.astate}</h2>

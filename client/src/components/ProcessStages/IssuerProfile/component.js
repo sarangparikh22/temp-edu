@@ -51,10 +51,10 @@ class IssuerProfile extends Component {
     contract.methods
       .verifyStudentProfile(stdAddress)
       .send({ from: accounts[1], gas: 1330000 })
-      .then(function(result) {
+      .then(function (result) {
         console.log(result);
       })
-      .catch(function(e) {
+      .catch(function (e) {
         console.log(e);
       });
   };
@@ -67,10 +67,26 @@ class IssuerProfile extends Component {
     contract.methods
       .approveRegistration(stdAddress)
       .send({ from: accounts[1], gas: 1330000 })
-      .then(function(result) {
+      .then(function (result) {
         console.log(result);
       })
-      .catch(function(e) {
+      .catch(function (e) {
+        console.log(e);
+      });
+  };
+
+  handleAccept = event => {
+    var clgAddress = accounts[1];
+
+    event.preventDefault();
+    const { accounts, contract } = this.state;
+    contract.methods
+      .acceptRegistration(clgAddress)
+      .send({ from: accounts[0], gas: 330000 })
+      .then(function (result) {
+        console.log(result);
+      })
+      .catch(function (e) {
         console.log(e);
       });
   };
@@ -169,7 +185,7 @@ class IssuerProfile extends Component {
             <div className="form-group">
               <div className="col-sm-offset-2 col-sm-4">
                 <button
-                  type="submit"
+
                   className="btn btn-primary"
                   onClick={this.handleVerify}
                 >
@@ -177,7 +193,7 @@ class IssuerProfile extends Component {
                 </button>
                 &nbsp; &nbsp; &nbsp;
                 <button
-                  type="submit"
+
                   className="btn btn-success"
                   onClick={this.handleApprove}
                 >
@@ -185,11 +201,18 @@ class IssuerProfile extends Component {
                 </button>
                 &nbsp; &nbsp; &nbsp;
                 <button
-                  type="submit"
+
                   className="btn btn-danger"
                   onClick={this.handleDeny}
                 >
                   Deny
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button
+                  className="btn btn-success"
+                  onClick={this.handleAccept}
+                >
+                  Accept
                 </button>
               </div>
             </div>

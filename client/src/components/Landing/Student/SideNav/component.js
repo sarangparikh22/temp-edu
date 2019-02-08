@@ -131,7 +131,7 @@ class studSideNav extends Component {
           </div>
           <div className="col-md-9">
             <div className="profile-content">
-              <h4> Certificate Request Form </h4>
+              <h4> Registration Request Form </h4>
               <br />
               <form className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div className="form-group">
