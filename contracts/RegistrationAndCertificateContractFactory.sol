@@ -1,8 +1,5 @@
 pragma solidity ^0.5.0;
 
-//import "./RegistrationContract.sol";
-//import "./CertificateContract.sol";
-
 contract RegistrationAndCertificateContractFactory {
 
     struct Student {

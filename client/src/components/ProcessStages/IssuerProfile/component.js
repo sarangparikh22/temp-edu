@@ -91,6 +91,20 @@ class IssuerProfile extends Component {
       });
   };
 
+  handleDeny = event => {
+    event.preventDefault();
+    const { accounts, contract } = this.state;
+    contract.methods
+      .getFirstStudent()
+      .send({ from: accounts[0], gas: 330000 })
+      .then(function (result) {
+        console.log(result);
+      })
+      .catch(function (e) {
+        console.log(e);
+      })
+  };
+
   render() {
     return (
       <div>
@@ -208,12 +222,7 @@ class IssuerProfile extends Component {
                   Deny
                 </button>
                 &nbsp; &nbsp; &nbsp;
-                <button
-                  className="btn btn-success"
-                  onClick={this.handleAccept}
-                >
-                  Accept
-                </button>
+
               </div>
             </div>
           </form>

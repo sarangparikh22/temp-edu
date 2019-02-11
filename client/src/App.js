@@ -70,9 +70,9 @@ class App extends Component {
             <Route path="/student" component={student} />
             <Route path="/verifier" component={verifier} />
             <Route path="/issuer" component={issuer} />
-            <Route path="/process" component={conveyance} />
+            <Route path="/studentprocess" component={conveyance} />
             <Route path="/side" component={SLanding} />
-            <Route path="/pr" component={pr} />
+            <Route path="/issuerprocess" component={pr} />
             <Route path="/ipfsTest" component={iTest} />
           </div>
         </BrowserRouter>

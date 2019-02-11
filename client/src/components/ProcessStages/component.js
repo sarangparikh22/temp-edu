@@ -78,12 +78,12 @@ class ProcessStages extends Component {
     this.setState({ astate: a });
     console.log("Status is ", this.state.astate);
 
-    /* const b = await contract.methods
-       .getCertificationStatus()
-       .call();
-     // console.log("Value of a is : ", a);
-     this.setState({ bstate: b });
-     console.log("Status is ", this.state.bstate); */
+    /*const b = await contract.methods
+      .getCertificationStatus()
+      .call();
+    console.log("Value of b is : ", b);
+    this.setState({ bstate: b });
+    console.log("Status is ", this.state.bstate); */
 
     switch (a) {
 
