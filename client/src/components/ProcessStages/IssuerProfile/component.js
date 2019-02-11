@@ -53,6 +53,7 @@ class IssuerProfile extends Component {
       .send({ from: accounts[1], gas: 1330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully verified the Student's Profile");
       })
       .catch(function (e) {
         console.log(e);
@@ -69,6 +70,7 @@ class IssuerProfile extends Component {
       .send({ from: accounts[1], gas: 1330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully approved the Student's Registration");
       })
       .catch(function (e) {
         console.log(e);

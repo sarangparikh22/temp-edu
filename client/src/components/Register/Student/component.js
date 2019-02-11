@@ -68,7 +68,7 @@ class student extends Component {
       .send({ from: accounts[0], gas: 330000 })
       .then(function (result) {
         console.log(result);
-
+        window.confirm("You have successfully Registered as Student");
       })
       .catch(function (e) {
         console.log(e);
@@ -77,6 +77,7 @@ class student extends Component {
     //var sname = this.state.sname;
     // var sname = document.getElementById("sname").value;
     console.log("Value of sname is ", sname);
+
   };
   /* ############# SmartContract Interaction Ends ############# */
 

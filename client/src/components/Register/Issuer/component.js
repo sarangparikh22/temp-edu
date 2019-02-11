@@ -64,13 +64,15 @@ class issuer extends Component {
     contract.methods
       .createCollege(instituteName, instituteCode, instituteAISHECode)
       .send({ from: accounts[1], gas: 330000 })
-      .then(function(result) {
+      .then(function (result) {
         console.log(result);
         window.confirm("You have successfully Registered as Educational Institute");
         var blockData = {transactionHash : result.transactionHash, details : "State - College Created"};
         this.props.addTransaction(blockData)
       }.bind(this))
       .catch(function(e) {
+      })
+      .catch(function (e) {
         console.log(e);
       });
 

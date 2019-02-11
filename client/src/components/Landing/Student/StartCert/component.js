@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import getWeb3 from "../../../../utils/getWeb3";
 import "./contractInteraction";
+import ipfs from "../../../ProcessStages/Upload/ipfs";
 import RegistrationAndCertificateContractFactory from "../../../../contracts/RegistrationAndCertificateContractFactory.json";
 class StartCert extends Component {
   constructor(props) {
     super(props);
     this.state = {
       storageValue: 0,
+      ipfsHash: "QmVvEXyFuj9EJwhkwNH7LaM41RGqLLw7MqLPo5qiUr8yG6",
       web3: null,
       accounts: null,
       contract: null,
@@ -51,6 +53,7 @@ class StartCert extends Component {
       .send({ from: accounts[0], gas: 330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully accepted your Registration by the College");
       })
       .catch(function (e) {
         console.log(e);
@@ -65,6 +68,7 @@ class StartCert extends Component {
       .send({ from: accounts[0], gas: 1330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You request for Certificate has been initiated");
       })
       .catch(function (e) {
         console.log(e);
@@ -79,6 +83,7 @@ class StartCert extends Component {
       .send({ from: accounts[0], gas: 330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully requested the College for Certification");
       })
       .catch(function (e) {
         console.log(e);
@@ -93,6 +98,7 @@ class StartCert extends Component {
       .send({ from: accounts[0], gas: 330000 })
       .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully accepted the Certificate given by the College");
       })
       .catch(function (e) {
         console.log(e);
@@ -144,8 +150,12 @@ class StartCert extends Component {
                 <div className="modal-body">
                   <form className="form-inline">
                     <div className="form-group">
-                      <label>Enter College Name:</label> &nbsp;
-                    <input type="text" className="form-control" />
+                      <label>Select a College:</label> &nbsp;
+                      <select className="form-control" id="sel1">
+                        <option>IIT</option>
+                        <option>NIT</option>
+                        <option>IIM</option>
+                      </select>
                     </div>
                     <br>
                     </br>
@@ -192,8 +202,20 @@ class StartCert extends Component {
                 <div className="modal-body">
                   <form className="form-inline">
                     <div className="form-group">
-                      <label>Enter College Name:</label> &nbsp;
-                    <input type="text" className="form-control" />
+                      <div className="col-sm">
+                        <button
+                          type="submit"
+                          className="btn btn-primary"
+                          onClick={this.handleView}
+                        >
+                          View Certificate
+                            </button>
+                        <p>This image is stored on IPFS & The Ethereum Blockchain!</p>
+                        <img
+                          src={`http://127.0.0.1:8080/ipfs/${this.state.ipfsHash}`}
+                          alt="Image Loads Here"
+                        />
+                      </div>
                     </div>
 
                   </form>
