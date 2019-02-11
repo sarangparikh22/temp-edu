@@ -4,6 +4,10 @@ import Carousel from "../../Carousel/component";
 import RegFactoryContract from "../../../contracts/RegistrationAndCertificateContractFactory.json";
 import getWeb3 from "../../../utils/getWeb3";
 import "./issuer.css";
+import { addTransaction } from '../../../actions/actionCreator'
+import { connect } from 'react-redux'
+import {bindActionCreators} from 'redux'
+import { throws } from "assert";
 class issuer extends Component {
   /* ################ Smart Contract Interaction begins ############# */
 
@@ -20,6 +24,7 @@ class issuer extends Component {
       instituteCode: null,
       instituteAISHECode: null
     };
+    this.addTransaction = this.props.addTransaction.bind(this);
   }
 
   componentDidMount = async () => {
@@ -50,7 +55,7 @@ class issuer extends Component {
     }
   };
 
-  handleSubmit = event => {
+  handleSubmit = event => {    
     var instituteName = this.state.instituteName;
     var instituteCode = this.state.instituteCode;
     var instituteAISHECode = this.state.instituteAISHECode;
@@ -61,7 +66,10 @@ class issuer extends Component {
       .send({ from: accounts[1], gas: 330000 })
       .then(function(result) {
         console.log(result);
-      })
+        window.confirm("You have successfully Registered as Educational Institute");
+        var blockData = {transactionHash : result.transactionHash, details : "State - College Created"};
+        this.props.addTransaction(blockData)
+      }.bind(this))
       .catch(function(e) {
         console.log(e);
       });
@@ -248,4 +256,12 @@ class issuer extends Component {
   }
 }
 
-export default issuer;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+      addTransaction
+  }, dispatch)
+}
+
+
+
+export default connect(null, mapDispatchToProps)(issuer)
