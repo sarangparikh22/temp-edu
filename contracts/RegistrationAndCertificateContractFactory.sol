@@ -34,6 +34,14 @@ contract RegistrationAndCertificateContractFactory {
     function getFirstStudent() public view returns(address){
         return studentsInfo[msg.sender].registrationContracts[0];
     }
+
+    function getStudentData() public view returns(string memory,uint,string memory){
+        string memory _name = studentsInfo[msg.sender].fullName;
+        uint _phoneNumber = studentsInfo[msg.sender].phoneNumber;
+        string memory _emailId = studentsInfo[msg.sender].emailId;  
+        return(_name,_phoneNumber,_emailId);
+    }
+
     
     function createStudent( string memory name, uint phoneNumber,  string memory emailId) public doesStudentExist(msg.sender){
         Student memory newStudent = Student(name, phoneNumber,emailId, new address[](0),  new address[](1) );

@@ -13,6 +13,7 @@ class studSideNav extends Component {
       contract: null,
       instance: null,
 
+      studentName: null,
       clgAddress: null,
       clgRegNum: null,
       clgEmailID: null,
@@ -47,6 +48,18 @@ class studSideNav extends Component {
       );
       console.error(error);
     }
+
+  };
+
+  runExample = async () => {
+    const { accounts, contract, astate } = this.state;
+
+    const a = await contract.methods
+      .getStudentData()
+      .call();
+    this.setState({ studentName: a[0] });
+    console.log("Status is ", this.state.astate);
+
   };
 
   handleSubmit = event => {
@@ -62,16 +75,18 @@ class studSideNav extends Component {
     contract.methods
       .startRegistration(clgAddress, clgRegNum, clgEmailID, clgYOJ, clgYOP)
       .send({ from: accounts[0], gas: 1330000 })
-      .then(function(result) {
+      .then(function (result) {
         console.log(result);
+        window.confirm("You have successfully initiated a Registration request to the College");
       })
-      .catch(function(e) {
+      .catch(function (e) {
         console.log(e);
       });
 
     var asd = this.state.clgAddress;
     // var sname = document.getElementById("sname").value;
     console.log("Value of sname is ", asd);
+
   };
 
   handleInputChange = event => {
@@ -95,7 +110,7 @@ class studSideNav extends Component {
                 <img src={profile} alt="Chicago" />
               </div>
               <div className="profile-usertitle">
-                <div className="profile-usertitle-name">Grahit</div>
+                <div className="profile-usertitle-name">{this.state.studentName}</div>
                 <div className="profile-usertitle-job">India</div>
               </div>
 
