@@ -99,6 +99,13 @@ contract RegistrationAndCertificateContractFactory {
         RegistrationContract registrationContract = RegistrationContract(registrationContractAddress);
         return registrationContract.getRegistrationStatus();
     }
+
+    function getCertificationStatus(address studentAddress, address collegeAddress) public view returns (string memory) {
+        address certificateContractAddress = studentsInfo[studentAddress].certificateContractsByCollege[collegeAddress];
+        CertificateContract certificateContract = CertificateContract(certificateContractAddress);
+        return certificateContract.getCertificationStatus();
+        
+    }
     
     function startCertification(address _collegeAddress) public{
         CertificateContract certContract = new CertificateContract(_collegeAddress);
@@ -323,7 +330,7 @@ contract CertificateContract {
     
     }    
 
-    function getRegistrationStatus() public view returns (string memory) {
+    function getCertificationStatus() public view returns (string memory) {
         if(CertificateStages.AcceptingCertificateRequest == stage){
             return "AcceptingCertificateRequest";
             }

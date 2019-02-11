@@ -6,6 +6,7 @@ import BucketComponent from "./components/Bucket";
 import Profile from "../Landing/Student/component";
 import StartCert from "../Landing/Student/StartCert/component";
 import TabBar from "../SectionBar/component";
+import Steps from "../Steps/component";
 
 import IssuerProfile from "../ProcessStages/IssuerProfile/component";
 import "./conveyance.css";
@@ -33,6 +34,8 @@ class conveyance extends Component {
         <div className="container">
           <Profile />
           <StartCert />
+          <br />
+          <br />
           <div className="flow">
             <span className="legend-label">
               <i className="fas in_complete fa-circle notranslate" />
@@ -51,19 +54,18 @@ class conveyance extends Component {
               Automatic
             </span>
           </div>
-          <br />
+
 
           <div className="process-title">
             <h2> Process Stages </h2>
           </div>
-          <section className="conveyance-diagram">
-            <BucketComponent bucketName={"Registration"} />
-            <BucketComponent bucketName={"Certification"} />
-            <BucketComponent bucketName={"Acceptance"} />
-          </section>
+
+
           <br />
           <br />
+          <Steps />
           <TabBar />
+          <br />
           <IssuerProfile />
         </div>
       </div>

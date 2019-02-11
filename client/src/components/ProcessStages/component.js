@@ -8,11 +8,9 @@ import TabBar from "../SectionBar/component";
 import IssuerProfile from "./IssuerProfile/component";
 import UploadCertificate from "./Upload/component";
 import getWeb3 from "../../utils/getWeb3";
+import Steps from "../Steps/component";
 import SimpleStorageContract from "../../contracts/SimpleStorage.json";
 import RegistrationAndCertificateContractFactory from "../../contracts/RegistrationAndCertificateContractFactory.json";
-import RegistrationContract from "../../contracts/RegistrationContract.json";
-import CertificateContract from "../../contracts/CertificateContract.json";
-//import "./conveyance.css";
 
 class ProcessStages extends Component {
   constructor(props) {
@@ -251,58 +249,31 @@ class ProcessStages extends Component {
         <br />
 
         <div className="container">
-          <div className="stepwizard">
-            <div className="stepwizard-row">
-              <Well2
-                stage={stage1}
-                index={index1}
-                status={this.state.index11}
-                stage_color={stage_color}
-              />
-              <Well2
-                stage={stage2}
-                index={index2}
-                status={this.state.index21}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage3}
-                index={index3}
-                status={this.state.index31}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage4}
-                index={index4}
-                status={this.state.index41}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage5}
-                index={index5}
-                status={status5}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage6}
-                index={index6}
-                status={status6}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage7}
-                index={index7}
-                status={status7}
-                stage_color="default"
-              />
-              <Well2
-                stage={stage8}
-                index={index8}
-                status={status8}
-                stage_color="default"
-              />
-            </div>
+          <div className="flow">
+            <span className="legend-label">
+              <i className="fas in_complete fa-circle notranslate" />
+              Incomplete
+            </span>
+            <span className="legend-label">
+              <i className="fas in_progress fa-circle notranslate" />
+              In Progress
+            </span>
+            <span className="legend-label">
+              <i className="fas fa-check-circle done notranslate" />
+              Done
+            </span>
+            <span className="legend-label">
+              <i className="fas fa-arrow-alt-circle-right done notranslate" />
+              Automatic
+            </span>
+
           </div>
+
+
+          <div className="process-title">
+            <h2> Process Stages </h2>
+          </div>
+          <Steps />
           <br />
           <br />
           <TabBar />
@@ -313,11 +284,9 @@ class ProcessStages extends Component {
           <UploadCertificate />
           <br />
           <br />
-          <div>
-            <h2> Status : {this.state.astate}</h2>
-          </div>
+
         </div>
-      </div>
+      </div >
     );
   }
 }
