@@ -5,6 +5,10 @@ import RegFactoryContract from "../../../contracts/RegistrationAndCertificateCon
 import getWeb3 from "../../../utils/getWeb3";
 
 import { Link } from "react-router-dom";
+import { addTransaction } from '../../../actions/actionCreator'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { throws } from "assert";
 
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
@@ -25,6 +29,7 @@ class student extends Component {
       phone: null,
       emailID: null
     };
+    this.addTransaction = this.props.addTransaction.bind(this);
   }
 
   componentDidMount = async () => {
@@ -69,6 +74,14 @@ class student extends Component {
       .then(function (result) {
         console.log(result);
         window.confirm("You have successfully Registered as Student");
+        var blockData = {
+          transactionHash: result.transactionHash,
+          blocknumber: result.blockNumber,
+          details: "State - Student Created"
+        };
+        this.props.addTransaction(blockData)
+      }.bind(this))
+      .catch(function (e) {
       })
       .catch(function (e) {
         console.log(e);
@@ -246,4 +259,12 @@ class student extends Component {
   }
 }
 
-export default student;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    addTransaction
+  }, dispatch)
+}
+
+
+
+export default connect(null, mapDispatchToProps)(student)

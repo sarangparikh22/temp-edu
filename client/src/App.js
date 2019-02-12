@@ -68,17 +68,18 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Route path="/home" component={uppernav} />
-            <Route path="/student" component={student} />
-            <Route path="/verifier" component={verifier} />
-            <Route path="/issuer" component={issuer} />
-            <Route path="/studentprocess" component={conveyance} />
-            <Route path="/side" component={SLanding} />
-            <Route path="/issuerprocess" component={pr} />
-            <Route path="/ipfsTest" component={iTest} />
+            <Route exact path="/home" component={uppernav} />
+            <Route exact path="/student" component={student} />
+            <Route exact path="/verifier" component={verifier} />
+            <Route exact path="/issuer" component={issuer} />
+            <Route exact path="/studentprocess" component={conveyance} />
+            <Route exact path="/side" component={SLanding} />
+            <Route exact path="/issuerprocess" component={pr} />
+            <Route exact path="/ipfsTest" component={iTest} />
+            <Route path="/" component={BlockExplorer} />
           </div>
-        </BrowserRouter>      
-        <BlockExplorer />  
+        </BrowserRouter>
+
       </div>
     );
   }
