@@ -66,7 +66,7 @@ class StepsComponent extends Component {
 
         switch (a) {
 
-            case "RequestRegistration":
+            case "RequestforRegistration":
                 this.setState({
                     index11: "btn-success",
                     index21: "btn-primary",
@@ -101,6 +101,14 @@ class StepsComponent extends Component {
                     index41: "btn-success"
                 });
                 break;
+
+            default:
+                this.setState({
+                    index11: "btn-default",
+                    index21: "btn-default",
+                    index31: "btn-default",
+                    index41: "btn-default"
+                })
         }
 
         const b = await contract.methods
@@ -150,6 +158,14 @@ class StepsComponent extends Component {
                     index81: "btn-success"
                 });
                 break;
+
+            default:
+                this.setState({
+                    index51: "btn-default",
+                    index61: "btn-default",
+                    index71: "btn-default",
+                    index81: "btn-default"
+                })
         }
 
     };
@@ -164,7 +180,7 @@ class StepsComponent extends Component {
         var stage7 = "Issue Certification";
         var stage8 = "Accept Certification";
 
-        var stage_color = "success";
+        //  var stage_color = "success";
 
         var index1 = "1";
         var index2 = "2";
@@ -175,14 +191,14 @@ class StepsComponent extends Component {
         var index7 = "7";
         var index8 = "8";
 
-        var status1 = "done";
-        var status2 = "btn-primary";
-        var status3 = "btn-default";
-        var status4 = "primary";
-        var status5 = "primary";
-        var status6 = "primary";
-        var status7 = "primary";
-        var status8 = "primary";
+        /*  var status1 = "done";
+          var status2 = "btn-primary";
+          var status3 = "btn-default";
+          var status4 = "primary";
+          var status5 = "primary";
+          var status6 = "primary";
+          var status7 = "primary";
+          var status8 = "primary"; */
         return (
             <div className="container">
                 <div className="stepwizard">
@@ -191,7 +207,7 @@ class StepsComponent extends Component {
                             stage={stage1}
                             index={index1}
                             status={this.state.index11}
-                            stage_color={stage_color}
+                            stage_color="default"
                         />
                         <Well2
                             stage={stage2}

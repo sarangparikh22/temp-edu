@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Well2.css";
 
 const Well2 = props => {

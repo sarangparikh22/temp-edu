@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./IssuerProfile.css";
 import getWeb3 from "../../../utils/getWeb3";
+import { contractInstance, accounts } from "../../../utils/getContract";
 import RegistrationAndCertificateContractFactory from "../../../contracts/RegistrationAndCertificateContractFactory.json";
 class IssuerProfile extends Component {
   state = {};
@@ -43,6 +44,7 @@ class IssuerProfile extends Component {
     }
   };
 
+
   handleVerify = event => {
     var stdAddress = "0x9cc53532815ccde2d97f09571bebd4a87a100b5e";
 
@@ -70,7 +72,7 @@ class IssuerProfile extends Component {
       .send({ from: accounts[1], gas: 1330000 })
       .then(function (result) {
         console.log(result);
-        window.confirm("You have successfully approved the Student's Registration");
+        window.confirm("You have successfully approved the Student Registration");
       })
       .catch(function (e) {
         console.log(e);

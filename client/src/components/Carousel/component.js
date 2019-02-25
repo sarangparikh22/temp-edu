@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import imR from "../../logo.svg";
 import Grad1 from "./Grad1.jpeg";
 import Grad2 from "./Grad2.jpeg";
 import Uni1 from "./Uni_1.jpg";
 import "./Carousel.css";
 
 class carousel extends Component {
-  // state = {  }
   render() {
     return (
       <div className="carousel-start">

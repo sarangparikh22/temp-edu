@@ -1,8 +1,51 @@
 import React, { Component } from "react";
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
+import Web3 from "web3";
+import getWeb3 from "../../../utils/getWeb3";
+import Ins from "../../../utils/getContract";
+// import { instanceC } from "../../../utils/getContract";
 import "./verifier.css";
 class verifier extends Component {
+
+
+  handleV = async (event) => {
+    event.preventDefault();
+
+
+    const web3 = await getWeb3();
+    const accounts = await web3.eth.getAccounts();
+    // // Get network provider and web3 instance.
+    // 
+    window.confirm("Pressed Submit - ");
+    // // Use web3 to get the user's accounts.
+    // const accounts = await web3.eth.getAccounts();
+    // console.log(accounts)
+
+    await Ins.methods.createStudent("RRR", 8888, "rrrr")
+      .send({ from: accounts[0], gas: 330000 })
+      .then(function (result) {
+        console.log(result);
+        window.confirm("You have successfully Registered as Student");
+      }).catch(function (e) {
+        console.log(e);
+      })
+    /* const web3 = getWeb3();
+ 
+     // Use web3 to get the user's accounts.
+     const accounts = await web3.eth.getAccounts();
+     await instanceC.methods.createStudent("RRR", 8888, "rrrr")
+       .send({ from: accounts[0], gas: 330000 })
+       .then(function (result) {
+         console.log(result);
+         window.confirm("You have successfully Registered as Student");
+       }).catch(function (e) {
+         console.log(e);
+       }) */
+
+  }
+
+
   // state = {  }
   render() {
     return (
@@ -14,12 +57,12 @@ class verifier extends Component {
           <div className="bfo">
             <h2 className="h">Verifier Registration form</h2>
             <br />
-            <form className="form-horizontal" action="/action_page.php">
+            <form className="form-horizontal">
               <div className="form-group">
-                <label className="control-label col-sm-2" for="ctgry">
+                <label className="control-label col-sm-2">
                   Verifier Category
-                </label>
-                <div class="col-sm-10">
+        </label>
+                <div className="col-sm-10">
                   <select>
                     <option value="vc1">Domestic Academic Institutions</option>
                     <option value="vc2">Domestic Companies</option>
@@ -34,9 +77,9 @@ class verifier extends Component {
               <br />
               <div className="form-group">
                 <h4>Company Details</h4>
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Company Name
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -47,9 +90,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Address
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <textarea
                     className="form-control"
@@ -60,9 +103,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Website URL
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -73,9 +116,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   GST Identification Number
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -86,9 +129,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   GST State Code
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -101,9 +144,9 @@ class verifier extends Component {
               <br />
               <div className="form-group">
                 <h4>Contact Person Details</h4>
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Company Person Name
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -114,10 +157,10 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label class="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Email
-                </label>
-                <div class="col-sm-10">
+        </label>
+                <div className="col-sm-10">
                   <input
                     type="email"
                     className="form-control"
@@ -127,9 +170,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Mobile Number
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -140,9 +183,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2">
                   Landline number
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -156,9 +199,9 @@ class verifier extends Component {
 
               <div className="form-group">
                 <h4>Alternative Contact Person Details</h4>
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2" >
                   Alternative Contact Person Name
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -169,9 +212,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2" >
                   Alternative Contact Person Email
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="email"
@@ -182,9 +225,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2" >
                   Alternative Contact Person Mobile Number
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -195,9 +238,9 @@ class verifier extends Component {
                 </div>
               </div>
               <div className="form-group">
-                <label className="control-label col-sm-2" for="email">
+                <label className="control-label col-sm-2" >
                   Alternative Contact Person Landline number
-                </label>
+        </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
@@ -208,33 +251,33 @@ class verifier extends Component {
                 </div>
               </div>
 
-              <div class="form-group">
-                <label class="control-label col-sm-2" for="pwd">
+              <div className="form-group">
+                <label className="control-label col-sm-2" >
                   Password:
-                </label>
-                <div class="col-sm-10">
+        </label>
+                <div className="col-sm-10">
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     id="pwd"
                     placeholder="Enter password"
                   />
                 </div>
               </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <div class="checkbox">
+              <div className="form-group">
+                <div className="col-sm-offset-2 col-sm-10">
+                  <div className="checkbox">
                     <label>
                       <input type="checkbox" /> Remember me
-                    </label>
+            </label>
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary">
+              <div className="form-group">
+                <div className="col-sm-offset-2 col-sm-10">
+                  <button type="submit" className="btn btn-primary" onClick={this.handleV}>
                     Submit
-                  </button>
+          </button>
                 </div>
               </div>
             </form>

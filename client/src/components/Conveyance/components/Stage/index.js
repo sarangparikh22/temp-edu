@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../conveyance.css";
 /*class StageComponent extends Component {
   //state = {};
@@ -15,7 +15,7 @@ import "../../conveyance.css";
 } */
 
 const StageComponent = props => {
-  const { bucketIndex, index, stage } = props;
+  const { stage } = props;
   return (
     <span className="stage--block">
       <span className="stage--block--name">{stage}</span>

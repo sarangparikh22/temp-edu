@@ -59,3 +59,16 @@
   height: 30px;
   width: 40px;
 }
+ 
+.navbar-right {
+  margin-right: 30px;
+}
+
+.dropdown-menu {
+  width: 510px; 
+  background-color: grey
+}
+
+.input-group {
+  padding: 3px;
+}

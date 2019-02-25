@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import SimpleStorageContract from "../../../contracts/SimpleStorage.json";
 import RegFactoryContract from "../../../contracts/RegistrationAndCertificateContractFactory.json";
 import getWeb3 from "../../../utils/getWeb3";
+import axios from 'axios';
+
+
 
 import { Link } from "react-router-dom";
 import { addTransaction } from '../../../actions/actionCreator'
@@ -13,6 +15,10 @@ import { throws } from "assert";
 import Uppernav from "../../UpperNav/component";
 import Carousel from "../../Carousel/component";
 import "./student.css";
+
+const Wallet = require('ethereumjs-wallet');
+const Transaction = require('../../../utils/sendTxContract');
+
 class student extends Component {
   /* ################ Smart Contract Interaction begins ############# */
 
@@ -27,7 +33,9 @@ class student extends Component {
 
       sname: null,
       phone: null,
-      emailID: null
+      emailID: null,
+      pwd: null,
+      username: null
     };
     this.addTransaction = this.props.addTransaction.bind(this);
   }
@@ -63,33 +71,61 @@ class student extends Component {
   };
 
   handleSubmit = event => {
+    event.preventDefault();
     var sname = this.state.sname;
     var phone = this.state.phone;
     var emailID = this.state.emailID;
-    event.preventDefault();
-    const { accounts, contract } = this.state;
-    contract.methods
-      .createStudent(sname, phone, emailID)
-      .send({ from: accounts[0], gas: 330000 })
-      .then(function (result) {
-        console.log(result);
-        window.confirm("You have successfully Registered as Student");
-        var blockData = {
-          transactionHash: result.transactionHash,
-          blocknumber: result.blockNumber,
-          details: "State - Student Created"
-        };
-        this.props.addTransaction(blockData)
-      }.bind(this))
-      .catch(function (e) {
-      })
-      .catch(function (e) {
-        console.log(e);
-      });
+    let password = this.state.pwd;
+    let username = this.state.username;
+    if (username && password) {
+      console.log('Registering User....');
 
-    //var sname = this.state.sname;
-    // var sname = document.getElementById("sname").value;
-    console.log("Value of sname is ", sname);
+      axios.post('http://localhost:5000/register', { "username": username, "password": password })
+        .then((response) => {
+          if (response.data.message) {
+            console.log(response.data.message);
+            if (response.data.message != `Username ${username} already exsists.`) {
+              console.log(response.data.data.wallet);
+              let walletRead = Wallet.fromV3(response.data.data.wallet, response.data.data.password)
+              let privKey = walletRead.getPrivateKeyString();
+              console.log(walletRead.getPrivateKeyString());
+              const { web3, accounts, contract } = this.state;
+              let value = web3.utils.toWei('0.5', 'ether');
+              web3.eth.sendTransaction({ to: response.data.data.wallet.address, from: accounts[0], value: value })
+              Transaction.doInteractionWithSC(privKey, response.data.data.wallet.address, `createStudent('${sname}','${phone}','${emailID}')`)
+            }
+          }
+        })
+    } else {
+      console.log('Please Enter Username and Password');
+    }
+
+
+
+
+
+
+    /*  const { accounts, contract } = this.state;
+      contract.methods
+        .createStudent(sname, phone, emailID)
+        .send({ from: accounts[0], gas: 330000 })
+        .then(function (result) {
+          console.log(result);
+          window.confirm("You have successfully Registered as Student");
+          var blockData = {
+            transactionHash: result.transactionHash,
+            blocknumber: result.blockNumber,
+            details: "State - Student Created"
+          };
+          this.props.addTransaction(blockData)
+        }.bind(this))
+        .catch(function (e) {
+        })
+        .catch(function (e) {
+          console.log(e);
+        });
+  
+      console.log("Value of sname is ", sname); */
 
   };
   /* ############# SmartContract Interaction Ends ############# */

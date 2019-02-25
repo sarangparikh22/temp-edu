@@ -7,7 +7,7 @@ import "./issuer.css";
 import { addTransaction } from '../../../actions/actionCreator'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { throws } from "assert";
+
 class issuer extends Component {
   /* ################ Smart Contract Interaction begins ############# */
 
@@ -80,7 +80,7 @@ class issuer extends Component {
         console.log(e);
       });
 
-    //console.log("Value of Institute Name is ", instituteName);
+
   };
   /* ############# SmartContract Interaction Ends ############# */
 

@@ -1,15 +1,11 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Uppernav from "../UpperNav/component";
 import Carousel from "../Carousel/component";
-import Well1 from "./Well1/component";
-import Well2 from "./Well2/component";
 import TabBar from "../SectionBar/component";
 import IssuerProfile from "./IssuerProfile/component";
 import UploadCertificate from "./Upload/component";
 import getWeb3 from "../../utils/getWeb3";
 import Steps from "../Steps/component";
-import SimpleStorageContract from "../../contracts/SimpleStorage.json";
 import RegistrationAndCertificateContractFactory from "../../contracts/RegistrationAndCertificateContractFactory.json";
 
 class ProcessStages extends Component {
