@@ -299,7 +299,7 @@ let param = {
       "type": "function"
     }
   ]`,
-  contractAddress: '0xE527345B8ba8aCa4440EE3723c6A61ad1C087d66',
+  contractAddress: '0xbeeb867b5ca9359868d486fee43946adc25e5b48',
   encodedCall: "instance.methods." + 'createStudent("saru",123,"saru@gmail.com")' + ".encodeABI()"
 }
 

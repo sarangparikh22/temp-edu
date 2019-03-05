@@ -29,7 +29,20 @@ class upperNav extends Component {
 
       axios.post('http://localhost:5000/login', { "username": username, "password": password })
         .then((response) => {
-
+          if(response.data.token){
+            console.log(response.data.token);
+            axios.get('http://localhost:5000/home', { headers: {"Authorization" : `Bearer ${response.data.token}`} })
+            .then((response) => {
+                if(response){
+                    console.log(response.data.wallet);
+                    localStorage.setItem('wallet',JSON.stringify(response.data.wallet));
+                }
+            })
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('password', password);
+          }else{
+            console.log(`Incorrect Username or Password`);
+          }
 
 
 

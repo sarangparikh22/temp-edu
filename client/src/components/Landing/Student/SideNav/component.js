@@ -4,6 +4,9 @@ import profile from "./profile.png";
 import RegFactoryContract from "../../../../contracts/RegistrationAndCertificateContractFactory.json";
 import getWeb3 from "../../../../utils/getWeb3";
 
+const Wallet = require('ethereumjs-wallet');
+const Transaction = require('../../../../utils/sendTxContract');
+
 class studSideNav extends Component {
   constructor(props) {
     super(props);
@@ -71,17 +74,27 @@ class studSideNav extends Component {
     var clgYOP = this.state.clgYOP;
 
     event.preventDefault();
-    const { accounts, contract } = this.state;
-    contract.methods
-      .startRegistration(clgAddress, clgRegNum, clgEmailID, clgYOJ, clgYOP)
-      .send({ from: accounts[0], gas: 1330000 })
-      .then(function (result) {
-        console.log(result);
-        window.confirm("You have successfully initiated a Registration request to the College");
-      })
-      .catch(function (e) {
-        console.log(e);
-      });
+    // const { accounts, contract } = this.state;
+    let wallet = JSON.parse(localStorage.getItem('wallet'));
+    let password = localStorage.getItem('password');
+    let walletRead = Wallet.fromV3(wallet, password)
+    let privKey = walletRead.getPrivateKeyString();
+    console.log(walletRead.getPrivateKeyString());
+    const { web3, accounts, contract } = this.state;
+    Transaction.doInteractionWithSC(privKey, wallet.address, 
+      `startRegistration('${clgAddress}','${clgRegNum}','${clgEmailID}','${clgYOJ}','${clgYOP}')`)
+            
+
+    // contract.methods
+    //   .startRegistration(clgAddress, clgRegNum, clgEmailID, clgYOJ, clgYOP)
+    //   .send({ from: accounts[0], gas: 1330000 })
+    //   .then(function (result) {
+    //     console.log(result);
+    //     window.confirm("You have successfully initiated a Registration request to the College");
+    //   })
+    //   .catch(function (e) {
+    //     console.log(e);
+    //   });
 
     var asd = this.state.clgAddress;
     // var sname = document.getElementById("sname").value;
