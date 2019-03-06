@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from 'axios';
 import home_logo from "./certimy_home.png";
 import "./UpperNav.css";
@@ -18,7 +18,7 @@ class upperNav extends Component {
     };
     // this.addTransaction = this.props.addTransaction.bind(this);
   }
-
+  
   handleLogin = event => {
     event.preventDefault();
     let username = this.state.username;
@@ -37,6 +37,11 @@ class upperNav extends Component {
                     console.log(response.data.wallet);
                     localStorage.setItem('wallet',JSON.stringify(response.data.wallet));
                 }
+            })
+            this.setState(()=>{
+              return{
+                token: response.data.token
+              }
             })
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('password', password);
@@ -76,8 +81,65 @@ class upperNav extends Component {
       [event.target.name]: event.target.value
     });
   };
-
+  logOut = () => {
+    this.setState(()=>{
+      return{
+        token: undefined
+      }
+    })
+    localStorage.removeItem('token');
+    window.location.pathname = '/home';
+  }
   render() {
+    if(this.props.token || this.state.token){
+      // console.log('dsajk'+this.token);
+      window.location.pathname = '/studentprocess';
+      // return <Redirect to="/studentprocess" />
+    }
+    let login;
+    
+      login =  <ul className="nav navbar-nav navbar-right">
+      <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="#"><span className="glyphicon glyphicon-log-in"></span>Login</a>
+        <ul className="dropdown-menu">
+          <li>
+            <form className="form-inline">
+              <div className="input-group">
+                <span className="input-group-addon">
+                  <i className="fa fa-user" />
+                </span>
+                <input
+                  id="username"
+                  type="text"
+                  className="form-control"
+                  name="username"
+                  placeholder="User name"
+                  required
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <div className="input-group">
+                <span className="input-group-addon">
+                  <i className="fa fa-lock" />
+                </span>
+                <input
+                  id="pwd"
+                  type="password"
+                  className="form-control"
+                  name="pwd"
+                  placeholder="Password"
+                  required
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <button type="submit" className="btn btn-primary" onClick={this.handleLogin}> Log In </button>
+            </form></li>
+        </ul>
+
+      </li>
+    </ul>;
+    
     return (
       <div className="upp">
         <nav>
@@ -101,47 +163,11 @@ class upperNav extends Component {
                 <Link to="/verifier">Verifier Registration</Link>
               </li>
             </ul>
-            <ul className="nav navbar-nav navbar-right">
-              <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <form className="form-inline">
-                      <div className="input-group">
-                        <span className="input-group-addon">
-                          <i className="fa fa-user" />
-                        </span>
-                        <input
-                          id="username"
-                          type="text"
-                          className="form-control"
-                          name="username"
-                          placeholder="User name"
-                          required
-                          onChange={this.handleInputChange}
-                        />
-                      </div>
-
-                      <div className="input-group">
-                        <span className="input-group-addon">
-                          <i className="fa fa-lock" />
-                        </span>
-                        <input
-                          id="pwd"
-                          type="password"
-                          className="form-control"
-                          name="pwd"
-                          placeholder="Password"
-                          required
-                          onChange={this.handleInputChange}
-                        />
-                      </div>
-
-                      <button type="submit" className="btn btn-primary" onClick={this.handleLogin}> Log In </button>
-                    </form></li>
-                </ul>
-
-              </li>
+            {!localStorage.getItem('token') ? login : <ul className="nav navbar-nav navbar-right">
+            <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="#" onClick={this.logOut}><span className="glyphicon glyphicon-log-in"></span>LogOut</a>
+            </li>  
             </ul>
+            }
           </div>
 
 
