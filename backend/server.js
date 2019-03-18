@@ -45,7 +45,8 @@ app.post('/register',(req,res)=>{
                             const user = {
                                 username: req.body.username,
                                 password: hash,
-                                wallet: wallet
+                                wallet: wallet,
+                                role: req.body.role
                             }
                             dbo.collection("users").insertOne(user, function(err, res) {
                                 if (err) throw err;
@@ -53,7 +54,8 @@ app.post('/register',(req,res)=>{
                         res.json({message: "User Created",data:{
                             wallet: wallet,
                             username: req.body.username,
-                            password: req.body.password
+                            password: req.body.password,
+                            role: req.body.role
                         }});
                         
 
@@ -80,7 +82,8 @@ app.post('/login', (req,res) =>{
                     if(req.body.username === result[0].username && bcrypt.compareSync(req.body.password, result[0].password)){
                         const user = {
                             username: result[0].username,
-                            wallet: result[0].wallet
+                            wallet: result[0].wallet,
+                            role: result[0].role
                         }
                         jwt.sign({ user }, 'someshitkey', (err,token) => {
                             res.send({token});
@@ -102,7 +105,7 @@ app.get('/home', verifyToken, (req, res) => {
         if(err){
             res.sendStatus(403);
         }else{
-            res.json({username: authData.user.username, wallet: authData.user.wallet});
+            res.json({username: authData.user.username, wallet: authData.user.wallet, role: authData.user.role});
             //res.send(`Welcome ${authData.user.username } <br> Wallet: ${JSON.stringify(authData.user.wallet)}`);
         }
     })
