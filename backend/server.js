@@ -46,7 +46,8 @@ app.post('/register',(req,res)=>{
                                 username: req.body.username,
                                 password: hash,
                                 wallet: wallet,
-                                role: req.body.role
+                                role: req.body.role,
+                                name: req.body.name
                             }
                             dbo.collection("users").insertOne(user, function(err, res) {
                                 if (err) throw err;
@@ -55,7 +56,8 @@ app.post('/register',(req,res)=>{
                             wallet: wallet,
                             username: req.body.username,
                             password: req.body.password,
-                            role: req.body.role
+                            role: req.body.role,
+                            name: req.body.name
                         }});
                         
 
