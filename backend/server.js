@@ -118,7 +118,9 @@ app.get('/getAllCollege', (req,res) => {
         if (err) throw err;
         var dbo = db.db("sarup");
         dbo.collection("users").find({role: "university"}).toArray(function(err, result) {
-            let uniAddress = result.map(uni => uni.wallet.address);
+            let uniAddress = result.map(uni => {
+                return {name: uni.name, address: uni.wallet.address}
+            });
             res.send(uniAddress);
             db.close();
           });
