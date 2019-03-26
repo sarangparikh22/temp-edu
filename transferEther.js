@@ -11,7 +11,7 @@ function transferEther(privKey, addressWallet, addressToTransfer, callback){
     var value = web3.utils.toBN(web3.utils.toWei(80, 'ether'));
     var nonce, gasPrice;
 
-    web3.eth.getTransactionCount(address)
+    web3.eth.getTransactionCount(addressWallet)
     .then((numberOfTxs) => {
       nonce = numberOfTxs;
       return web3.eth.getGasPrice();
@@ -45,11 +45,3 @@ function transferEther(privKey, addressWallet, addressToTransfer, callback){
 module.exports = {
     transferEther
 }
-
-Prompt.get(schema, function(err, result) {
-
-  var strJson = fs.readFileSync(result.walletFilename, 'utf8');
-  var wallet  = Wallet.fromV3(strJson, result.password);
-
-  
-});
