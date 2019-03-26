@@ -34,7 +34,7 @@ function transferEther(privKey, addressWallet, addressToTransfer, callback){
   
       web3.eth.sendSignedTransaction(strTx)
       .once('transactionHash', function(txid) {
-        console.log(callback('\n\ttxid: ' + txid + '\n'));
+        callback('\n\ttxid: ' + txid + '\n');
       })
       .catch((ex) => {
         console.log(ex);
