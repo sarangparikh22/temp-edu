@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "548b6537-3819-4fa2-99c7-6633ec64b9e0",
+		"name": "NodeJS JWT Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Initial Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sar",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "parikh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sarang",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "parikh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home Route - Protected",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2FyYW5nIiwid2FsbGV0Ijp7InZlcnNpb24iOjMsImlkIjoiZWM2NWRiZTItMmYxYS00NmVmLWI4OTMtNzE2MDI0ZWRhZDQwIiwiYWRkcmVzcyI6IjNhZGY2Mzk5OGNkNTJkYzNkMTI5ODk0ZWUwNGYxOGFiYTNkYWQ2MzUiLCJjcnlwdG8iOnsiY2lwaGVydGV4dCI6ImY4Nzc2MmU5OGJmZjk5MDM0NzUzNmE4NTg5NmM2YTI2YzE2ZmFjYjI2ZWYyNjdiNTIwYmYwOGViMjg3ZjgzMTAiLCJjaXBoZXJwYXJhbXMiOnsiaXYiOiIyOTEyYmM1NDE4ZjNiZjcwYjY3ZGY1MWRhMTU0OWMwMyJ9LCJjaXBoZXIiOiJhZXMtMTI4LWN0ciIsImtkZiI6InNjcnlwdCIsImtkZnBhcmFtcyI6eyJka2xlbiI6MzIsInNhbHQiOiI4YjRhMzk0YWY5YTNhYWFkYWE0M2JlMGJmNGFiNTAxOWY0MzAyNTExY2Y0YmI2NDhlZWZkMmU4OWY2Y2YwMDZkIiwibiI6MjYyMTQ0LCJyIjo4LCJwIjoxfSwibWFjIjoiNzA4NjdmOGE1ODc2ODk3ZDVmOTVjOWNmM2RiZjRjNzcwODI1YzQ3ODBmMjJjMmU2OWMwZTZmZjQ2ZjI4ZDNlNiJ9fX0sImlhdCI6MTU0OTE4MTQ3OH0.tzoOK8dpL-YSNAmdSPemLDS_TYB6ZgSStsS4z5FsKBY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction Creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2FydSIsIndhbGxldCI6eyJ2ZXJzaW9uIjozLCJpZCI6ImFmNjJlNDRkLTE4YjEtNDM0Ni1iMGQ0LTQ4ODVmZGMyMjk5OCIsImFkZHJlc3MiOiIwNDVmNzlkNGM4OGQyZmY0MGEzMmM3MmQ4MzRiMjAyNGZiODNhNWQ5IiwiY3J5cHRvIjp7ImNpcGhlcnRleHQiOiI3OTMxZjE4NjhiYzdhMDc4ZjdmOTE5YmNiMzZmZjE2YjI1YmJmNmM3NjVjNWQyNmQzMjVkMjYxM2M4ZWQ0M2I4IiwiY2lwaGVycGFyYW1zIjp7Iml2IjoiZWJmYTlkNmNhOGE1ZWExYmM2ZTkwM2IzMzJiZmRjMDMifSwiY2lwaGVyIjoiYWVzLTEyOC1jdHIiLCJrZGYiOiJzY3J5cHQiLCJrZGZwYXJhbXMiOnsiZGtsZW4iOjMyLCJzYWx0IjoiNmYwZWFmYzljZTI0NzY2MTIxNWM5ZGY5MWIzZWQyMjY3ZTNiYWVkYTFmYTRlOTZhMzQ5NGQ5ODhlNDQyODc4YiIsIm4iOjI2MjE0NCwiciI6OCwicCI6MX0sIm1hYyI6ImY0MjA2YWI3MDljYThlMGQ2MTI2MDZmOWM2NmJhMzZhOTM3ZDc5Njg2MTk2NWJhZWJlYjE0OGVmYWFlOGQ1YzIifX0sInJvbGUiOm51bGx9LCJpYXQiOjE1NTkxNDE0OTV9.bdP9NfTO1MTWGJULxzo082BAwcjs_XoLh4LFNrw7_8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/tx/certfunction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tx",
+						"certfunction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commit Transaction To Blockchain",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2FydSIsIndhbGxldCI6eyJ2ZXJzaW9uIjozLCJpZCI6ImFmNjJlNDRkLTE4YjEtNDM0Ni1iMGQ0LTQ4ODVmZGMyMjk5OCIsImFkZHJlc3MiOiIwNDVmNzlkNGM4OGQyZmY0MGEzMmM3MmQ4MzRiMjAyNGZiODNhNWQ5IiwiY3J5cHRvIjp7ImNpcGhlcnRleHQiOiI3OTMxZjE4NjhiYzdhMDc4ZjdmOTE5YmNiMzZmZjE2YjI1YmJmNmM3NjVjNWQyNmQzMjVkMjYxM2M4ZWQ0M2I4IiwiY2lwaGVycGFyYW1zIjp7Iml2IjoiZWJmYTlkNmNhOGE1ZWExYmM2ZTkwM2IzMzJiZmRjMDMifSwiY2lwaGVyIjoiYWVzLTEyOC1jdHIiLCJrZGYiOiJzY3J5cHQiLCJrZGZwYXJhbXMiOnsiZGtsZW4iOjMyLCJzYWx0IjoiNmYwZWFmYzljZTI0NzY2MTIxNWM5ZGY5MWIzZWQyMjY3ZTNiYWVkYTFmYTRlOTZhMzQ5NGQ5ODhlNDQyODc4YiIsIm4iOjI2MjE0NCwiciI6OCwicCI6MX0sIm1hYyI6ImY0MjA2YWI3MDljYThlMGQ2MTI2MDZmOWM2NmJhMzZhOTM3ZDc5Njg2MTk2NWJhZWJlYjE0OGVmYWFlOGQ1YzIifX0sInJvbGUiOm51bGx9LCJpYXQiOjE1NTkxNDE0OTV9.bdP9NfTO1MTWGJULxzo082BAwcjs_XoLh4LFNrw7_8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tx",
+							"value": "0xf8498080808080801ba0fb9b9821a52889a6e5165785a582f6fcf1476dcd69335de9557bde50c2e13299a06fd301c0d556134be896bec47a139c02fdd33f0e159f9907ad41aeb38d527d05",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/commit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"commit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
